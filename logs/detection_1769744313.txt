@@ -1,0 +1,431 @@
+正在初始化深度检测模型 (VadCLIP)...
+/home/chenpengxu/VadCLIP/pipeline.py:86: FutureWarning: You are using `torch.load` with `weights_only=False` (the current default value), which uses the default pickle module implicitly. It is possible to construct malicious pickle data which will execute arbitrary code during unpickling (See https://github.com/pytorch/pytorch/blob/main/SECURITY.md#untrusted-models for more details). In a future release, the default value for `weights_only` will be flipped to `True`. This limits the functions that could be executed during unpickling. Arbitrary objects will no longer be allowed to be loaded via this mode unless they are explicitly allowlisted by the user via `torch.serialization.add_safe_globals`. We recommend you start setting `weights_only=True` for any use case where you don't have full control of the loaded file. Please open an issue on GitHub for any issues related to this experimental feature.
+  model_param = torch.load(VIOLENCE_MODEL_PATH, map_location=DEVICE)
+==================================================
+ 视频异常检测系统已启动 (搜索目录: /home/chenpengxu/VadCLIP/test_video)
+==================================================
+
+当前可用视频：
+ 1. test_video_stealing.mp4
+ 2. test_video_long.mp4
+ 3. Abuse044_x264.mp4
+ 4. test_video_fake_arson.mp4
+ 5. test_video_shooting.mp4
+ 6. test_video_assault.mp4
+ 7. test_video_arson.mp4
+ 8. test_video_fake_burglary.mp4
+ 9. test_video_normal.mp4
+ 10. test_video_robbery.mp4
+ 11. Stealing017_x264.mp4
+ 12. test_video_burglary.mp4
+ 13. test_video_fighting.mp4
+ 14. test_video_robbery2.mp4
+ 15. test_video_fake_shooting.mp4
+ 16. Normal_Videos396_x264.mp4
+ 17. test_video_long2.mp4
+
+请输入视频编号或文件名 (输入 'q' 退出): 
+开始播放与检测流... (视频 FPS: 30.0, 窗口: 10s, 步长: 1s, 按 'q' 键退出)
+[Window 0001-0300 | 0.0s-10.0s] Normal: 0.254 | Abnormal: 0.746 | AvgProb: 0.33 | Hits: 1/4 [Abuse]
+  └─ Top-K Categories: Abuse:0.33, Robbery:0.16, Burglary:0.06, Fighting:0.05, Shoplifting:0.05
+[Window 0031-0330 | 1.0s-11.0s] Normal: 0.236 | Abnormal: 0.764 | AvgProb: 0.33 | Hits: 2/4 [Abuse]
+  └─ Top-K Categories: Abuse:0.33, Robbery:0.16, Fighting:0.06, Burglary:0.06, Shoplifting:0.05
+[Window 0061-0360 | 2.0s-12.0s] Normal: 0.251 | Abnormal: 0.749 | AvgProb: 0.35 | Hits: 3/4 [Abuse]
+  └─ Top-K Categories: Abuse:0.35, Robbery:0.15, Burglary:0.06, Fighting:0.05, Shoplifting:0.05
+[Window 0091-0390 | 3.0s-13.0s] Normal: 0.286 | Abnormal: 0.714 | AvgProb: 0.33 | Hits: 4/4 [Abuse]
+  └─ Top-K Categories: Abuse:0.33, Robbery:0.14, Burglary:0.05, Fighting:0.05, Shoplifting:0.04
+  └─ [事件开始] 连续命中 4 次，开始收集视频片段...
+[Window 0121-0420 | 4.0s-14.0s] Normal: 0.463 | Abnormal: 0.537 | AvgProb: 0.25 | Hits: 5/4 [Abuse]
+  └─ Top-K Categories: Abuse:0.25, Robbery:0.10, Burglary:0.05, Shoplifting:0.04, Fighting:0.03
+[Window 0151-0450 | 5.0s-15.0s] Normal: 0.379 | Abnormal: 0.621 | AvgProb: 0.27 | Hits: 6/4 [Abuse]
+  └─ Top-K Categories: Abuse:0.27, Robbery:0.12, Burglary:0.06, Shoplifting:0.04, Fighting:0.04
+[Window 0181-0480 | 6.0s-16.0s] Normal: 0.397 | Abnormal: 0.603 | AvgProb: 0.26 | Hits: 7/4 [Abuse]
+  └─ Top-K Categories: Abuse:0.26, Robbery:0.13, Burglary:0.06, Shoplifting:0.04, Fighting:0.03
+[Window 0211-0510 | 7.0s-17.0s] Normal: 0.325 | Abnormal: 0.675 | AvgProb: 0.28 | Hits: 8/4 [Abuse]
+  └─ Top-K Categories: Abuse:0.28, Robbery:0.15, Burglary:0.07, Shoplifting:0.05, Fighting:0.04
+[Window 0241-0540 | 8.0s-18.0s] Normal: 0.252 | Abnormal: 0.748 | AvgProb: 0.30 | Hits: 9/4 [Abuse]
+  └─ Top-K Categories: Abuse:0.30, Robbery:0.17, Burglary:0.08, Shoplifting:0.05, Fighting:0.04
+[Window 0271-0570 | 9.0s-19.0s] Normal: 0.184 | Abnormal: 0.816 | AvgProb: 0.32 | Hits: 10/4 [Abuse]
+  └─ Top-K Categories: Abuse:0.32, Robbery:0.20, Burglary:0.09, Shoplifting:0.06, Fighting:0.04
+[Window 0301-0600 | 10.0s-20.0s] Normal: 0.185 | Abnormal: 0.815 | AvgProb: 0.30 | Hits: 11/4 [Abuse]
+  └─ Top-K Categories: Abuse:0.30, Robbery:0.21, Burglary:0.10, Shoplifting:0.06, Fighting:0.04
+[Window 0331-0630 | 11.0s-21.0s] Normal: 0.176 | Abnormal: 0.824 | AvgProb: 0.29 | Hits: 12/4 [Abuse]
+  └─ Top-K Categories: Abuse:0.29, Robbery:0.23, Burglary:0.10, Shoplifting:0.06, Assault:0.04
+[Window 0361-0660 | 12.0s-22.0s] Normal: 0.159 | Abnormal: 0.841 | AvgProb: 0.28 | Hits: 13/4 [Abuse]
+  └─ Top-K Categories: Abuse:0.28, Robbery:0.23, Burglary:0.11, Shoplifting:0.07, Fighting:0.04
+[Window 0391-0690 | 13.0s-23.0s] Normal: 0.161 | Abnormal: 0.839 | AvgProb: 0.26 | Hits: 14/4 [Abuse]
+  └─ Top-K Categories: Abuse:0.26, Robbery:0.24, Burglary:0.12, Shoplifting:0.07, Fighting:0.04
+  └─ [事件结束] 类别变更: Abuse -> Robbery. 发送 VLM 申请...
+[Window 0421-0720 | 14.0s-24.0s] Normal: 0.169 | Abnormal: 0.831 | AvgProb: 0.23 | Hits: 1/4 [Robbery]
+[VLM] 触发验证任务 | ID: 1 | 类型: Abuse | 范围: 91-720 (3.0s-24.0s)
+
+  └─ Top-K Categories: Robbery:0.23, Abuse:0.23, Burglary:0.13, Shoplifting:0.08, Fighting:0.04
+[Window 0451-0750 | 15.0s-25.0s] Normal: 0.218 | Abnormal: 0.782 | AvgProb: 0.22 | Hits: 2/4 [Robbery]
+  └─ Top-K Categories: Robbery:0.22, Abuse:0.21, Burglary:0.11, Shoplifting:0.08, Fighting:0.04
+[Window 0481-0780 | 16.0s-26.0s] Normal: 0.243 | Abnormal: 0.757 | AvgProb: 0.22 | Hits: 3/4 [Robbery]
+  └─ Top-K Categories: Robbery:0.22, Abuse:0.21, Burglary:0.11, Shoplifting:0.07, Fighting:0.04
+[Window 0511-0810 | 17.0s-27.0s] Normal: 0.299 | Abnormal: 0.701 | AvgProb: 0.20 | Hits: 4/4 [Robbery]
+  └─ Top-K Categories: Robbery:0.20, Abuse:0.19, Burglary:0.10, Shoplifting:0.07, Fighting:0.04
+  └─ [事件开始] 连续命中 4 次，开始收集视频片段...
+[VLM] 正在调用 qwen3-vl-plus (ID: 1, 片段: 0091-0720, 共 600 帧)...
+  └─ [事件结束] 类别变更: Robbery -> Abuse. 发送 VLM 申请...
+[Window 0541-0840 | 18.0s-28.0s] Normal: 0.341 | Abnormal: 0.659 | AvgProb: 0.18 | Hits: 1/4 [Abuse]
+[VLM] 触发验证任务 | ID: 2 | 类型: Robbery | 范围: 511-840 (17.0s-28.0s)
+  └─ Top-K Categories: Abuse:0.18, Robbery:0.18, Burglary:0.09, Shoplifting:0.07, Fighting:0.05
+
+[Window 0571-0870 | 19.0s-29.0s] Normal: 0.363 | Abnormal: 0.637 | AvgProb: 0.18 | Hits: 2/4 [Abuse]
+  └─ Top-K Categories: Abuse:0.18, Robbery:0.17, Burglary:0.07, Shoplifting:0.07, Fighting:0.05
+[VLM] 正在调用 qwen3-vl-plus (ID: 2, 片段: 0511-0840, 共 300 帧)...
+[Window 0601-0900 | 20.0s-30.0s] Normal: 0.411 | Abnormal: 0.589 | AvgProb: 0.18 | Hits: 3/4 [Abuse]
+  └─ Top-K Categories: Abuse:0.18, Robbery:0.15, Burglary:0.06, Shoplifting:0.06, Fighting:0.05
+[Window 0631-0930 | 21.0s-31.0s] Normal: 0.377 | Abnormal: 0.623 | AvgProb: 0.20 | Hits: 4/4 [Abuse]
+  └─ Top-K Categories: Abuse:0.20, Robbery:0.17, Burglary:0.07, Shoplifting:0.06, Fighting:0.05
+  └─ [事件开始] 连续命中 4 次，开始收集视频片段...
+[Window 0661-0960 | 22.0s-32.0s] Normal: 0.319 | Abnormal: 0.681 | AvgProb: 0.22 | Hits: 5/4 [Abuse]
+  └─ Top-K Categories: Abuse:0.22, Robbery:0.18, Shoplifting:0.06, Burglary:0.06, Fighting:0.05
+[Window 0691-0990 | 23.0s-33.0s] Normal: 0.275 | Abnormal: 0.725 | AvgProb: 0.24 | Hits: 6/4 [Abuse]
+  └─ Top-K Categories: Abuse:0.24, Robbery:0.20, Burglary:0.07, Shoplifting:0.06, Fighting:0.05
+[Window 0721-1020 | 24.0s-34.0s] Normal: 0.196 | Abnormal: 0.804 | AvgProb: 0.28 | Hits: 7/4 [Abuse]
+  └─ Top-K Categories: Abuse:0.28, Robbery:0.23, Burglary:0.07, Shoplifting:0.06, Fighting:0.05
+[Window 0751-1050 | 25.0s-35.0s] Normal: 0.160 | Abnormal: 0.840 | AvgProb: 0.30 | Hits: 8/4 [Abuse]
+  └─ Top-K Categories: Abuse:0.30, Robbery:0.24, Burglary:0.07, Shoplifting:0.06, Fighting:0.05
+[Window 0781-1080 | 26.0s-36.0s] Normal: 0.146 | Abnormal: 0.854 | AvgProb: 0.31 | Hits: 9/4 [Abuse]
+  └─ Top-K Categories: Abuse:0.31, Robbery:0.24, Burglary:0.07, Shoplifting:0.06, Assault:0.04
+[Window 0811-1110 | 27.0s-37.0s] Normal: 0.122 | Abnormal: 0.878 | AvgProb: 0.31 | Hits: 10/4 [Abuse]
+  └─ Top-K Categories: Abuse:0.31, Robbery:0.26, Burglary:0.08, Shoplifting:0.06, Assault:0.05
+[Window 0841-1140 | 28.0s-38.0s] Normal: 0.076 | Abnormal: 0.924 | AvgProb: 0.33 | Hits: 11/4 [Abuse]
+  └─ Top-K Categories: Abuse:0.33, Robbery:0.29, Burglary:0.08, Assault:0.06, Shoplifting:0.06
+[Window 0871-1170 | 29.0s-39.0s] Normal: 0.068 | Abnormal: 0.932 | AvgProb: 0.33 | Hits: 12/4 [Abuse]
+  └─ Top-K Categories: Abuse:0.33, Robbery:0.30, Burglary:0.08, Assault:0.06, Shoplifting:0.06
+[Window 0901-1200 | 30.0s-40.0s] Normal: 0.046 | Abnormal: 0.954 | AvgProb: 0.32 | Hits: 13/4 [Abuse]
+  └─ Top-K Categories: Abuse:0.32, Robbery:0.29, Assault:0.08, Burglary:0.08, Shoplifting:0.06
+[Window 0931-1230 | 31.0s-41.0s] Normal: 0.039 | Abnormal: 0.961 | AvgProb: 0.33 | Hits: 14/4 [Abuse]
+  └─ Top-K Categories: Abuse:0.33, Robbery:0.29, Assault:0.08, Burglary:0.08, Shoplifting:0.05
+[Window 0961-1260 | 32.0s-42.0s] Normal: 0.035 | Abnormal: 0.965 | AvgProb: 0.33 | Hits: 15/4 [Abuse]
+  └─ Top-K Categories: Abuse:0.33, Robbery:0.28, Assault:0.09, Burglary:0.07, Shoplifting:0.05
+[Window 0991-1290 | 33.0s-43.0s] Normal: 0.027 | Abnormal: 0.973 | AvgProb: 0.34 | Hits: 16/4 [Abuse]
+  └─ Top-K Categories: Abuse:0.34, Robbery:0.26, Assault:0.10, Burglary:0.07, Shooting:0.06
+[Window 1021-1320 | 34.0s-44.0s] Normal: 0.028 | Abnormal: 0.972 | AvgProb: 0.35 | Hits: 17/4 [Abuse]
+  └─ Top-K Categories: Abuse:0.35, Robbery:0.26, Assault:0.10, Burglary:0.06, Shooting:0.06
+[Window 1051-1350 | 35.0s-45.0s] Normal: 0.031 | Abnormal: 0.969 | AvgProb: 0.36 | Hits: 18/4 [Abuse]
+  └─ Top-K Categories: Abuse:0.36, Robbery:0.24, Assault:0.09, Fighting:0.06, Shooting:0.06
+[Window 1081-1380 | 36.0s-46.0s] Normal: 0.034 | Abnormal: 0.966 | AvgProb: 0.36 | Hits: 19/4 [Abuse]
+  └─ Top-K Categories: Abuse:0.36, Robbery:0.24, Assault:0.09, Fighting:0.06, Shooting:0.06
+[Window 1111-1410 | 37.0s-47.0s] Normal: 0.037 | Abnormal: 0.963 | AvgProb: 0.37 | Hits: 20/4 [Abuse]
+  └─ Top-K Categories: Abuse:0.37, Robbery:0.22, Assault:0.08, Fighting:0.08, Shooting:0.06
+[Window 1141-1440 | 38.0s-48.0s] Normal: 0.046 | Abnormal: 0.954 | AvgProb: 0.39 | Hits: 21/4 [Abuse]
+  └─ Top-K Categories: Abuse:0.39, Robbery:0.21, Fighting:0.08, Assault:0.07, Shooting:0.05
+[Window 1171-1470 | 39.0s-49.0s] Normal: 0.041 | Abnormal: 0.959 | AvgProb: 0.37 | Hits: 22/4 [Abuse]
+  └─ Top-K Categories: Abuse:0.37, Robbery:0.24, Assault:0.08, Fighting:0.06, Burglary:0.05
+[Window 1201-1500 | 40.0s-50.0s] Normal: 0.030 | Abnormal: 0.970 | AvgProb: 0.36 | Hits: 23/4 [Abuse]
+  └─ Top-K Categories: Abuse:0.36, Robbery:0.29, Assault:0.08, Burglary:0.07, Shoplifting:0.04
+[Window 1231-1530 | 41.0s-51.0s] Normal: 0.041 | Abnormal: 0.959 | AvgProb: 0.37 | Hits: 24/4 [Abuse]
+  └─ Top-K Categories: Abuse:0.37, Robbery:0.28, Assault:0.07, Burglary:0.06, Fighting:0.05
+[Window 1261-1560 | 42.0s-52.0s] Normal: 0.051 | Abnormal: 0.949 | AvgProb: 0.34 | Hits: 25/4 [Abuse]
+  └─ Top-K Categories: Abuse:0.34, Robbery:0.32, Burglary:0.08, Assault:0.06, Shoplifting:0.04
+  └─ [事件结束] 类别变更: Abuse -> Robbery. 发送 VLM 申请...
+[Window 1291-1590 | 43.0s-53.0s] Normal: 0.063 | Abnormal: 0.937 | AvgProb: 0.34 | Hits: 1/4 [Robbery]
+[VLM] 触发验证任务 | ID: 3 | 类型: Abuse | 范围: 631-1590 (21.0s-53.0s)
+  └─ Top-K Categories: Robbery:0.34, Abuse:0.32, Burglary:0.10, Assault:0.05, Shoplifting:0.04
+
+[Window 1321-1620 | 44.0s-54.0s] Normal: 0.072 | Abnormal: 0.928 | AvgProb: 0.35 | Hits: 2/4 [Robbery]
+  └─ Top-K Categories: Robbery:0.35, Abuse:0.30, Burglary:0.11, Assault:0.05, Shoplifting:0.04
+[Window 1351-1650 | 45.0s-55.0s] Normal: 0.063 | Abnormal: 0.937 | AvgProb: 0.36 | Hits: 3/4 [Robbery]
+  └─ Top-K Categories: Robbery:0.36, Abuse:0.29, Burglary:0.11, Assault:0.06, Shoplifting:0.04
+[Window 1381-1680 | 46.0s-56.0s] Normal: 0.051 | Abnormal: 0.949 | AvgProb: 0.38 | Hits: 4/4 [Robbery]
+  └─ Top-K Categories: Robbery:0.38, Abuse:0.28, Burglary:0.11, Assault:0.06, Shoplifting:0.04
+  └─ [事件开始] 连续命中 4 次，开始收集视频片段...
+[VLM] 正在调用 qwen3-vl-plus (ID: 3, 片段: 0631-1590, 共 930 帧)...
+[Window 1411-1710 | 47.0s-57.0s] Normal: 0.046 | Abnormal: 0.954 | AvgProb: 0.38 | Hits: 5/4 [Robbery]
+  └─ Top-K Categories: Robbery:0.38, Abuse:0.26, Burglary:0.13, Assault:0.06, Shoplifting:0.04
+[Window 1441-1740 | 48.0s-58.0s] Normal: 0.029 | Abnormal: 0.971 | AvgProb: 0.40 | Hits: 6/4 [Robbery]
+  └─ Top-K Categories: Robbery:0.40, Abuse:0.22, Burglary:0.16, Assault:0.07, Shoplifting:0.04
+[Window 1471-1770 | 49.0s-59.0s] Normal: 0.030 | Abnormal: 0.970 | AvgProb: 0.40 | Hits: 7/4 [Robbery]
+  └─ Top-K Categories: Robbery:0.40, Abuse:0.23, Burglary:0.16, Assault:0.07, Shoplifting:0.04
+[Window 1501-1800 | 50.0s-60.0s] Normal: 0.030 | Abnormal: 0.970 | AvgProb: 0.40 | Hits: 8/4 [Robbery]
+  └─ Top-K Categories: Robbery:0.40, Abuse:0.24, Burglary:0.14, Assault:0.07, Shoplifting:0.04
+[Window 1531-1830 | 51.0s-61.0s] Normal: 0.030 | Abnormal: 0.970 | AvgProb: 0.40 | Hits: 9/4 [Robbery]
+  └─ Top-K Categories: Robbery:0.40, Abuse:0.25, Burglary:0.13, Assault:0.07, Shoplifting:0.04
+[Window 1561-1860 | 52.0s-62.0s] Normal: 0.039 | Abnormal: 0.961 | AvgProb: 0.36 | Hits: 10/4 [Robbery]
+  └─ Top-K Categories: Robbery:0.36, Abuse:0.28, Burglary:0.12, Assault:0.07, Shoplifting:0.04
+[Window 1591-1890 | 53.0s-63.0s] Normal: 0.046 | Abnormal: 0.954 | AvgProb: 0.35 | Hits: 11/4 [Robbery]
+  └─ Top-K Categories: Robbery:0.35, Abuse:0.29, Burglary:0.12, Assault:0.07, Shoplifting:0.04
+[Window 1621-1920 | 54.0s-64.0s] Normal: 0.046 | Abnormal: 0.954 | AvgProb: 0.34 | Hits: 12/4 [Robbery]
+  └─ Top-K Categories: Robbery:0.34, Abuse:0.28, Burglary:0.12, Assault:0.06, Shoplifting:0.04
+[Window 1651-1950 | 55.0s-65.0s] Normal: 0.070 | Abnormal: 0.930 | AvgProb: 0.33 | Hits: 13/4 [Robbery]
+  └─ Top-K Categories: Robbery:0.33, Abuse:0.28, Burglary:0.13, Assault:0.05, Shoplifting:0.04
+[Window 1681-1980 | 56.0s-66.0s] Normal: 0.082 | Abnormal: 0.918 | AvgProb: 0.32 | Hits: 14/4 [Robbery]
+  └─ Top-K Categories: Robbery:0.32, Abuse:0.27, Burglary:0.13, Assault:0.05, Shoplifting:0.05
+[Window 1711-2010 | 57.0s-67.0s] Normal: 0.080 | Abnormal: 0.920 | AvgProb: 0.31 | Hits: 15/4 [Robbery]
+  └─ Top-K Categories: Robbery:0.31, Abuse:0.30, Burglary:0.12, Assault:0.05, Shoplifting:0.04
+  └─ [事件结束] 类别变更: Robbery -> Abuse. 发送 VLM 申请...
+[Window 1741-2040 | 58.0s-68.0s] Normal: 0.084 | Abnormal: 0.916 | AvgProb: 0.32 | Hits: 1/4 [Abuse]
+  └─ Top-K Categories: Abuse:0.32, Robbery:0.28, Burglary:0.10, Assault:0.05, Shoplifting:0.04
+[Window 1771-2070 | 59.0s-69.0s] Normal: 0.127 | Abnormal: 0.873 | AvgProb: 0.31 | Hits: 2/4 [Abuse]
+  └─ Top-K Categories: Abuse:0.31, Robbery:0.28, Burglary:0.09, Shoplifting:0.04, Assault:0.04
+[Window 1801-2100 | 60.0s-70.0s] Normal: 0.194 | Abnormal: 0.806 | AvgProb: 0.28 | Hits: 3/4 [Abuse]
+  └─ Top-K Categories: Abuse:0.28, Robbery:0.24, Burglary:0.09, Shoplifting:0.05, Assault:0.03
+[Window 1831-2130 | 61.0s-71.0s] Normal: 0.222 | Abnormal: 0.778 | AvgProb: 0.25 | Hits: 4/4 [Abuse]
+  └─ Top-K Categories: Abuse:0.25, Robbery:0.24, Burglary:0.08, Shoplifting:0.05, Fighting:0.03
+  └─ [事件开始] 连续命中 4 次，开始收集视频片段...
+[Window 1861-2160 | 62.0s-72.0s] Normal: 0.195 | Abnormal: 0.805 | AvgProb: 0.25 | Hits: 5/4 [Abuse]
+  └─ Top-K Categories: Abuse:0.25, Robbery:0.25, Burglary:0.09, Shoplifting:0.05, Fighting:0.04
+[Window 1891-2190 | 63.0s-73.0s] Normal: 0.182 | Abnormal: 0.818 | AvgProb: 0.27 | Hits: 6/4 [Abuse]
+  └─ Top-K Categories: Abuse:0.27, Robbery:0.26, Burglary:0.08, Shoplifting:0.05, Fighting:0.04
+[Window 1921-2220 | 64.0s-74.0s] Normal: 0.215 | Abnormal: 0.785 | AvgProb: 0.27 | Hits: 7/4 [Abuse]
+  └─ Top-K Categories: Abuse:0.27, Robbery:0.25, Burglary:0.08, Shoplifting:0.05, Assault:0.03
+[Window 1951-2250 | 65.0s-75.0s] Normal: 0.198 | Abnormal: 0.802 | AvgProb: 0.27 | Hits: 8/4 [Abuse]
+  └─ Top-K Categories: Abuse:0.27, Robbery:0.26, Burglary:0.08, Shoplifting:0.05, Assault:0.04
+  └─ [事件结束] 类别变更: Abuse -> Robbery. 发送 VLM 申请...
+[Window 1981-2280 | 66.0s-76.0s] Normal: 0.155 | Abnormal: 0.845 | AvgProb: 0.30 | Hits: 1/4 [Robbery]
+  └─ Top-K Categories: Robbery:0.30, Abuse:0.26, Burglary:0.10, Shoplifting:0.05, Assault:0.04
+[Window 2011-2310 | 67.0s-77.0s] Normal: 0.188 | Abnormal: 0.812 | AvgProb: 0.29 | Hits: 2/4 [Robbery]
+  └─ Top-K Categories: Robbery:0.29, Abuse:0.26, Burglary:0.10, Shoplifting:0.05, Assault:0.03
+[Window 2041-2340 | 68.0s-78.0s] Normal: 0.196 | Abnormal: 0.804 | AvgProb: 0.29 | Hits: 3/4 [Robbery]
+  └─ Top-K Categories: Robbery:0.29, Abuse:0.23, Burglary:0.11, Shoplifting:0.05, Assault:0.03
+[Window 2071-2370 | 69.0s-79.0s] Normal: 0.179 | Abnormal: 0.821 | AvgProb: 0.29 | Hits: 4/4 [Robbery]
+  └─ Top-K Categories: Robbery:0.29, Abuse:0.24, Burglary:0.11, Shoplifting:0.05, Assault:0.04
+  └─ [事件开始] 连续命中 4 次，开始收集视频片段...
+[Window 2101-2400 | 70.0s-80.0s] Normal: 0.189 | Abnormal: 0.811 | AvgProb: 0.29 | Hits: 5/4 [Robbery]
+  └─ Top-K Categories: Robbery:0.29, Abuse:0.23, Burglary:0.11, Shoplifting:0.05, Assault:0.03
+[Window 2131-2430 | 71.0s-81.0s] Normal: 0.163 | Abnormal: 0.837 | AvgProb: 0.31 | Hits: 6/4 [Robbery]
+  └─ Top-K Categories: Robbery:0.31, Abuse:0.24, Burglary:0.11, Shoplifting:0.05, Assault:0.04
+[Window 2161-2460 | 72.0s-82.0s] Normal: 0.131 | Abnormal: 0.869 | AvgProb: 0.33 | Hits: 7/4 [Robbery]
+  └─ Top-K Categories: Robbery:0.33, Abuse:0.25, Burglary:0.12, Shoplifting:0.04, Assault:0.04
+[Window 2191-2490 | 73.0s-83.0s] Normal: 0.169 | Abnormal: 0.831 | AvgProb: 0.31 | Hits: 8/4 [Robbery]
+  └─ Top-K Categories: Robbery:0.31, Abuse:0.24, Burglary:0.12, Shoplifting:0.04, Assault:0.04
+[Window 2221-2520 | 74.0s-84.0s] Normal: 0.135 | Abnormal: 0.865 | AvgProb: 0.32 | Hits: 9/4 [Robbery]
+  └─ Top-K Categories: Robbery:0.32, Abuse:0.24, Burglary:0.13, Shoplifting:0.04, Assault:0.04
+[Window 2251-2550 | 75.0s-85.0s] Normal: 0.149 | Abnormal: 0.851 | AvgProb: 0.32 | Hits: 10/4 [Robbery]
+  └─ Top-K Categories: Robbery:0.32, Abuse:0.22, Burglary:0.14, Shoplifting:0.05, Assault:0.04
+[Window 2281-2580 | 76.0s-86.0s] Normal: 0.143 | Abnormal: 0.857 | AvgProb: 0.31 | Hits: 11/4 [Robbery]
+  └─ Top-K Categories: Robbery:0.31, Abuse:0.23, Burglary:0.13, Shoplifting:0.05, Assault:0.04
+[Window 2311-2610 | 77.0s-87.0s] Normal: 0.079 | Abnormal: 0.921 | AvgProb: 0.34 | Hits: 12/4 [Robbery]
+  └─ Top-K Categories: Robbery:0.34, Abuse:0.23, Burglary:0.13, Assault:0.05, Shoplifting:0.05
+[Window 2341-2640 | 78.0s-88.0s] Normal: 0.073 | Abnormal: 0.927 | AvgProb: 0.34 | Hits: 13/4 [Robbery]
+  └─ Top-K Categories: Robbery:0.34, Abuse:0.24, Burglary:0.14, Assault:0.06, Shoplifting:0.05
+[Window 2371-2670 | 79.0s-89.0s] Normal: 0.061 | Abnormal: 0.939 | AvgProb: 0.34 | Hits: 14/4 [Robbery]
+  └─ Top-K Categories: Robbery:0.34, Abuse:0.26, Burglary:0.13, Assault:0.06, Shoplifting:0.05
+[Window 2401-2700 | 80.0s-90.0s] Normal: 0.054 | Abnormal: 0.946 | AvgProb: 0.33 | Hits: 15/4 [Robbery]
+  └─ Top-K Categories: Robbery:0.33, Abuse:0.30, Burglary:0.13, Assault:0.06, Shoplifting:0.05
+[Window 2431-2730 | 81.0s-91.0s] Normal: 0.050 | Abnormal: 0.950 | AvgProb: 0.32 | Hits: 16/4 [Robbery]
+  └─ Top-K Categories: Robbery:0.32, Abuse:0.31, Burglary:0.13, Assault:0.06, Shoplifting:0.05
+  └─ [事件结束] 类别变更: Robbery -> Abuse. 发送 VLM 申请...
+[Window 2461-2760 | 82.0s-92.0s] Normal: 0.059 | Abnormal: 0.941 | AvgProb: 0.31 | Hits: 1/4 [Abuse]
+  └─ Top-K Categories: Abuse:0.31, Robbery:0.31, Burglary:0.13, Assault:0.06, Shoplifting:0.05
+[Window 2491-2790 | 83.0s-93.0s] Normal: 0.031 | Abnormal: 0.969 | AvgProb: 0.35 | Hits: 2/4 [Abuse]
+  └─ Top-K Categories: Abuse:0.35, Robbery:0.31, Burglary:0.12, Assault:0.07, Shoplifting:0.04
+[Window 2521-2820 | 84.0s-94.0s] Normal: 0.028 | Abnormal: 0.972 | AvgProb: 0.34 | Hits: 3/4 [Abuse]
+  └─ Top-K Categories: Abuse:0.34, Robbery:0.32, Burglary:0.13, Assault:0.07, Shoplifting:0.04
+[Window 2551-2850 | 85.0s-95.0s] Normal: 0.030 | Abnormal: 0.970 | AvgProb: 0.35 | Hits: 4/4 [Abuse]
+  └─ Top-K Categories: Abuse:0.35, Robbery:0.30, Burglary:0.13, Assault:0.07, Shoplifting:0.04
+  └─ [事件开始] 连续命中 4 次，开始收集视频片段...
+[Window 2581-2880 | 86.0s-96.0s] Normal: 0.033 | Abnormal: 0.967 | AvgProb: 0.39 | Hits: 5/4 [Abuse]
+  └─ Top-K Categories: Abuse:0.39, Robbery:0.28, Burglary:0.12, Assault:0.07, Shoplifting:0.03
+[Window 2611-2910 | 87.0s-97.0s] Normal: 0.041 | Abnormal: 0.959 | AvgProb: 0.41 | Hits: 6/4 [Abuse]
+  └─ Top-K Categories: Abuse:0.41, Robbery:0.25, Burglary:0.12, Assault:0.06, Shoplifting:0.03
+[Window 2641-2940 | 88.0s-98.0s] Normal: 0.039 | Abnormal: 0.961 | AvgProb: 0.43 | Hits: 7/4 [Abuse]
+  └─ Top-K Categories: Abuse:0.43, Robbery:0.25, Burglary:0.12, Assault:0.06, Shoplifting:0.03
+[Window 2671-2970 | 89.0s-99.0s] Normal: 0.049 | Abnormal: 0.951 | AvgProb: 0.45 | Hits: 8/4 [Abuse]
+  └─ Top-K Categories: Abuse:0.45, Robbery:0.23, Burglary:0.12, Assault:0.06, Shoplifting:0.03
+[Window 2701-3000 | 90.0s-100.0s] Normal: 0.050 | Abnormal: 0.950 | AvgProb: 0.44 | Hits: 9/4 [Abuse]
+  └─ Top-K Categories: Abuse:0.44, Robbery:0.24, Burglary:0.12, Assault:0.06, Shoplifting:0.03
+[Window 2731-3030 | 91.0s-101.0s] Normal: 0.064 | Abnormal: 0.936 | AvgProb: 0.44 | Hits: 10/4 [Abuse]
+  └─ Top-K Categories: Abuse:0.44, Robbery:0.23, Burglary:0.10, Assault:0.05, Shoplifting:0.03
+[Window 2761-3060 | 92.0s-102.0s] Normal: 0.047 | Abnormal: 0.953 | AvgProb: 0.42 | Hits: 11/4 [Abuse]
+  └─ Top-K Categories: Abuse:0.42, Robbery:0.27, Burglary:0.10, Assault:0.06, Shoplifting:0.03
+[Window 2791-3090 | 93.0s-103.0s] Normal: 0.056 | Abnormal: 0.944 | AvgProb: 0.42 | Hits: 12/4 [Abuse]
+  └─ Top-K Categories: Abuse:0.42, Robbery:0.27, Burglary:0.12, Assault:0.05, Shoplifting:0.03
+[Window 2821-3120 | 94.0s-104.0s] Normal: 0.057 | Abnormal: 0.943 | AvgProb: 0.39 | Hits: 13/4 [Abuse]
+  └─ Top-K Categories: Abuse:0.39, Robbery:0.29, Burglary:0.13, Assault:0.05, Shoplifting:0.03
+[Window 2851-3150 | 95.0s-105.0s] Normal: 0.041 | Abnormal: 0.959 | AvgProb: 0.38 | Hits: 14/4 [Abuse]
+  └─ Top-K Categories: Abuse:0.38, Robbery:0.30, Burglary:0.13, Assault:0.06, Shoplifting:0.03
+[Window 2881-3180 | 96.0s-106.0s] Normal: 0.031 | Abnormal: 0.969 | AvgProb: 0.38 | Hits: 15/4 [Abuse]
+  └─ Top-K Categories: Abuse:0.38, Robbery:0.31, Burglary:0.12, Assault:0.07, Shoplifting:0.03
+[Window 2911-3210 | 97.0s-107.0s] Normal: 0.036 | Abnormal: 0.964 | AvgProb: 0.37 | Hits: 16/4 [Abuse]
+  └─ Top-K Categories: Abuse:0.37, Robbery:0.30, Burglary:0.13, Assault:0.06, Shoplifting:0.03
+[Window 2941-3240 | 98.0s-108.0s] Normal: 0.024 | Abnormal: 0.976 | AvgProb: 0.37 | Hits: 17/4 [Abuse]
+  └─ Top-K Categories: Abuse:0.37, Robbery:0.31, Burglary:0.12, Assault:0.07, Shoplifting:0.03
+[Window 2971-3270 | 99.0s-109.0s] Normal: 0.026 | Abnormal: 0.974 | AvgProb: 0.38 | Hits: 18/4 [Abuse]
+  └─ Top-K Categories: Abuse:0.38, Robbery:0.31, Burglary:0.12, Assault:0.07, Shoplifting:0.03
+[Window 3001-3300 | 100.0s-110.0s] Normal: 0.027 | Abnormal: 0.973 | AvgProb: 0.39 | Hits: 19/4 [Abuse]
+  └─ Top-K Categories: Abuse:0.39, Robbery:0.30, Burglary:0.12, Assault:0.07, Shoplifting:0.03
+[Window 3031-3330 | 101.0s-111.0s] Normal: 0.022 | Abnormal: 0.978 | AvgProb: 0.38 | Hits: 20/4 [Abuse]
+  └─ Top-K Categories: Abuse:0.38, Robbery:0.32, Burglary:0.12, Assault:0.07, Shoplifting:0.03
+[Window 3061-3360 | 102.0s-112.0s] Normal: 0.022 | Abnormal: 0.978 | AvgProb: 0.35 | Hits: 21/4 [Abuse]
+  └─ Top-K Categories: Abuse:0.35, Robbery:0.33, Burglary:0.13, Assault:0.07, Shoplifting:0.03
+[Window 3091-3390 | 103.0s-113.0s] Normal: 0.024 | Abnormal: 0.976 | AvgProb: 0.36 | Hits: 22/4 [Abuse]
+  └─ Top-K Categories: Abuse:0.36, Robbery:0.33, Burglary:0.13, Assault:0.07, Shoplifting:0.03
+[Window 3121-3420 | 104.0s-114.0s] Normal: 0.024 | Abnormal: 0.976 | AvgProb: 0.35 | Hits: 23/4 [Abuse]
+  └─ Top-K Categories: Abuse:0.35, Robbery:0.34, Burglary:0.13, Assault:0.07, Shoplifting:0.03
+[Window 3151-3450 | 105.0s-115.0s] Normal: 0.025 | Abnormal: 0.975 | AvgProb: 0.36 | Hits: 24/4 [Abuse]
+  └─ Top-K Categories: Abuse:0.36, Robbery:0.33, Burglary:0.12, Assault:0.07, Shoplifting:0.03
+[Window 3181-3480 | 106.0s-116.0s] Normal: 0.045 | Abnormal: 0.955 | AvgProb: 0.35 | Hits: 25/4 [Abuse]
+  └─ Top-K Categories: Abuse:0.35, Robbery:0.31, Burglary:0.14, Assault:0.06, Shoplifting:0.03
+[Window 3211-3510 | 107.0s-117.0s] Normal: 0.037 | Abnormal: 0.963 | AvgProb: 0.35 | Hits: 26/4 [Abuse]
+  └─ Top-K Categories: Abuse:0.35, Robbery:0.32, Burglary:0.13, Assault:0.06, Shoplifting:0.03
+[Window 3241-3540 | 108.0s-118.0s] Normal: 0.055 | Abnormal: 0.945 | AvgProb: 0.35 | Hits: 27/4 [Abuse]
+  └─ Top-K Categories: Abuse:0.35, Robbery:0.32, Burglary:0.12, Assault:0.05, Shoplifting:0.03
+[Window 3271-3570 | 109.0s-119.0s] Normal: 0.048 | Abnormal: 0.952 | AvgProb: 0.37 | Hits: 28/4 [Abuse]
+  └─ Top-K Categories: Abuse:0.37, Robbery:0.30, Burglary:0.12, Assault:0.06, Shoplifting:0.03
+
+==================================================
+ VLM 分析报告 (511-840 | 17.0s-28.0s)
+--------------------------------------------------
+{
+    "status": "normal",
+    "alarm_confidence": 0.1,
+    "description": "视频显示一个室内场景（疑似卧室），墙上挂有带画框的装饰画，左侧有小柜子。两名女性在床边互动：左侧女性穿条纹上衣、头发盘起，弯腰整理床上物品；右侧女性穿深色衣物，也弯腰参与整理或协助。两人动作协调、无对抗性，未见暴力、威胁、抢夺财物等行为。画面光线较暗，但整体氛围平静，像是日常家务或共同整理床铺。",
+    "dl_validation": "模型初步判定为Robbery不成立。视频中无任何暴力、威胁、强行夺取财物的行为；两人互动自然，无受害者恐惧或被迫反应；人物身份无法确认为陌生人，更似家庭成员或熟人；行为不具备抢劫所需的公开对抗性与强制性特征。",
+    "other_crimes_detected": "none",
+    "reason": "视频仅呈现两人协同整理床铺的日常活动，无攻击、抢夺、入侵或破坏迹象。虽光线昏暗且画面质量较低，但所有可见动作均符合正常生活场景。无证据支持抢劫或其他犯罪行为，故判定为正常，报警置信度极低（0.1）。"
+}
+==================================================
+
+[VLM 判定] 正常或威胁程度低 (Status: normal, Conf: 0.1)
+
+[VLM] 触发验证任务 | ID: 4 | 类型: Robbery | 范围: 1381-2040 (46.0s-68.0s)
+[Window 3301-3600 | 110.0s-120.0s] Normal: 0.051 | Abnormal: 0.949 | AvgProb: 0.38 | Hits: 29/4 [Abuse]
+  └─ Top-K Categories: Abuse:0.38, Robbery:0.28, Burglary:0.13, Assault:0.06, Shoplifting:0.03
+[Window 3331-3630 | 111.0s-121.0s] Normal: 0.059 | Abnormal: 0.941 | AvgProb: 0.37 | Hits: 30/4 [Abuse]
+  └─ Top-K Categories: Abuse:0.37, Robbery:0.30, Burglary:0.12, Assault:0.06, Shoplifting:0.03
+[Window 3361-3660 | 112.0s-122.0s] Normal: 0.049 | Abnormal: 0.951 | AvgProb: 0.37 | Hits: 31/4 [Abuse]
+  └─ Top-K Categories: Abuse:0.37, Robbery:0.29, Burglary:0.14, Assault:0.06, Shoplifting:0.03
+[Window 3391-3690 | 113.0s-123.0s] Normal: 0.040 | Abnormal: 0.960 | AvgProb: 0.36 | Hits: 32/4 [Abuse]
+  └─ Top-K Categories: Abuse:0.36, Robbery:0.31, Burglary:0.14, Assault:0.06, Shoplifting:0.03
+[VLM] 正在调用 qwen3-vl-plus (ID: 4, 片段: 1381-2040, 共 630 帧)...
+[Window 3421-3720 | 114.0s-124.0s] Normal: 0.030 | Abnormal: 0.970 | AvgProb: 0.35 | Hits: 33/4 [Abuse]
+  └─ Top-K Categories: Abuse:0.35, Robbery:0.31, Burglary:0.14, Assault:0.07, Shoplifting:0.03
+[Window 3451-3750 | 115.0s-125.0s] Normal: 0.035 | Abnormal: 0.965 | AvgProb: 0.36 | Hits: 34/4 [Abuse]
+  └─ Top-K Categories: Abuse:0.36, Robbery:0.31, Burglary:0.13, Assault:0.07, Shoplifting:0.03
+  └─ [时间窗口达到上限] 40s 已到. 发送 VLM 申请并重新计时窗口...
+[Window 3481-3780 | 116.0s-126.0s] Normal: 0.039 | Abnormal: 0.961 | AvgProb: 0.39 | Hits: 35/4 [Abuse]
+  └─ Top-K Categories: Abuse:0.39, Robbery:0.28, Burglary:0.13, Assault:0.06, Shoplifting:0.03
+[Window 3511-3810 | 117.0s-127.0s] Normal: 0.058 | Abnormal: 0.942 | AvgProb: 0.41 | Hits: 36/4 [Abuse]
+  └─ Top-K Categories: Abuse:0.41, Robbery:0.26, Burglary:0.12, Assault:0.06, Shoplifting:0.03
+
+==================================================
+ VLM 分析报告 (631-1590 | 21.0s-53.0s)
+--------------------------------------------------
+{
+    "status": "normal",
+    "alarm_confidence": 0.1,
+    "description": "视频显示一个室内卧室场景，墙上挂有画框，床边有两位女性（一位穿条纹上衣、高发髻；另一位穿深色上衣）正在协助一位坐在床上的年长男性整理被褥或衣物。过程中，两人弯腰协作，动作轻柔，无激烈肢体冲突。第17秒起，一名穿浅色上衣的女性加入，与年长男性有短暂交谈和手部接触（如扶肩、握手），男性表情平静，未见痛苦、躲避或防御反应。最后一名穿深色衣服的男性进入画面，协助整理床铺或衣物，整体氛围为照护或日常协助行为。",
+    "dl_validation": "模型初步判定为Abuse缺乏依据：未观察到殴打、推搡、掐颈等暴力动作；受害者（年长男性）无恐惧、哭喊、躲闪等应激反应；所有身体接触均为支撑性、协助性动作；环境为家庭卧室，符合照护场景而非虐待场景。",
+    "other_crimes_detected": "none",
+    "reason": "全程无攻击性动作、无受害方痛苦表现、无强制控制迹象；人物互动符合家庭成员或护理人员协助老年人的常见行为模式。视频低分辨率可能导致误判，但基于可见行为特征，应判定为正常照护活动。置信度0.1表示极低可疑性，仅因画面昏暗和角度限制存在微小不确定性。"
+}
+==================================================
+
+[VLM 判定] 正常或威胁程度低 (Status: normal, Conf: 0.1)
+
+[VLM] 触发验证任务 | ID: 5 | 类型: Abuse | 范围: 1831-2280 (61.0s-76.0s)
+[Window 3541-3840 | 118.0s-128.0s] Normal: 0.052 | Abnormal: 0.948 | AvgProb: 0.42 | Hits: 37/4 [Abuse]
+  └─ Top-K Categories: Abuse:0.42, Robbery:0.24, Burglary:0.12, Assault:0.06, Shoplifting:0.03
+[Window 3571-3870 | 119.0s-129.0s] Normal: 0.060 | Abnormal: 0.940 | AvgProb: 0.42 | Hits: 38/4 [Abuse]
+  └─ Top-K Categories: Abuse:0.42, Robbery:0.23, Burglary:0.12, Assault:0.06, Shoplifting:0.03
+
+==================================================
+ VLM 分析报告 (91-720 | 3.0s-24.0s)
+--------------------------------------------------
+{
+    "status": "normal",
+    "alarm_confidence": 0.2,
+    "description": "视频显示一个昏暗的卧室场景，墙上挂有一幅花卉画作。两名女性站在一张病床（或护理床）两侧，床中躺着一名看似年长或虚弱的人（可能为病人或老人）。左侧女性穿条纹上衣、头发盘起；右侧女性穿深色T恤。两人多次弯腰、伸手整理床单或被褥，动作协调，无激烈对抗。右侧女性在第0秒曾抬手（似挥手示意或调整物品），但未接触他人身体；后续动作均为共同协助照料床上人员，如拉平床单、调整体位等。整个过程持续约19秒，无尖叫、挣扎、躲避、推搡、击打等暴力迹象，也无可见伤痕或痛苦表情（因画质模糊且角度限制，面部细节不可辨，但行为模式符合照护场景）。环境为典型家庭卧室，有床头柜、电源插座等日常陈设。",
+    "dl_validation": "模型初步判定为'Abuse'缺乏充分依据。视频中未观察到定义中要求的‘有力殴打、推拉、掐颈’等攻击性动作；受害者（床上人员）无防御或求救行为；两人互动呈现协作性而非强制性。该场景更符合家庭成员或护工对卧床者的日常照护行为（如换床单、翻身），属于正常生活活动。因此，否定模型的Abuse判定。",
+    "other_crimes_detected": "none",
+    "reason": "尽管光线昏暗、画质较低，但所有可辨识动作均为轻柔、协同的护理行为：两人同步弯腰整理床铺，无身体冲突、无情绪激动表现、无受害方反抗迹象。不符合 Abuse 定义中的7项关键特征（尤其缺失实际暴力动作与真实恐惧/痛苦反应）。考虑到家庭照护场景常见此类夜间整理床铺行为，判定为正常活动。置信度0.2表示存在极轻微可疑（因画面模糊+有人卧床+两人动作略急促），但远不足以支持异常结论。"
+}
+==================================================
+
+[VLM 判定] 正常或威胁程度低 (Status: normal, Conf: 0.2)
+
+[VLM] 触发验证任务 | ID: 6 | 类型: Robbery | 范围: 2071-2760 (69.0s-92.0s)
+[VLM] 正在调用 qwen3-vl-plus (ID: 5, 片段: 1831-2280, 共 420 帧)...
+[Window 3601-3900 | 120.0s-130.0s] Normal: 0.054 | Abnormal: 0.946 | AvgProb: 0.39 | Hits: 39/4 [Abuse]
+  └─ Top-K Categories: Abuse:0.39, Robbery:0.25, Burglary:0.14, Assault:0.06, Shoplifting:0.03
+[Window 3631-3930 | 121.0s-131.0s] Normal: 0.066 | Abnormal: 0.934 | AvgProb: 0.39 | Hits: 40/4 [Abuse]
+  └─ Top-K Categories: Abuse:0.39, Robbery:0.24, Burglary:0.14, Assault:0.05, Shoplifting:0.03
+  └─ [视频结束] 提交最后的事件片段...
+[VLM] 正在调用 qwen3-vl-plus (ID: 6, 片段: 2071-2760, 共 660 帧)...
+
+==================================================
+ VLM 分析报告 (1381-2040 | 46.0s-68.0s)
+--------------------------------------------------
+{
+    "status": "normal",
+    "alarm_confidence": 0.1,
+    "description": "视频显示一个室内卧室场景，墙上挂有花卉画作，床边有一位年长者坐在病床上（可能为住院或居家护理环境）。一名穿深色上衣的人员（疑似护理人员或家属）在协助老人整理衣物或被褥：先与老人握手/接触手部，随后拿起一件浅色衣物（可能是病号服或睡衣），展开、抖动并为老人穿戴或铺盖。过程中老人配合，动作缓慢而平稳。约15秒后，另一名女性进入画面右侧，协助整理床铺或物品，两人协同操作，无争执、无暴力迹象。整体光线较暗，画面质量低，但行为符合日常照护场景。",
+    "dl_validation": "模型初步判定为Robbery不成立。视频中无任何暴力、威胁、强行夺取财物的行为；人物互动是协作性、关怀性的；老人未表现出恐惧或抗拒；无财物转移证据（如钱包、手机、贵重物品被拿走）。该场景更符合家庭护理或医院陪护行为。",
+    "other_crimes_detected": "none",
+    "reason": "所有动作均指向日常照护行为：协助穿衣/铺床、多人协作、老人被动配合且无应激反应。无强行控制、搜身、抢夺、胁迫等抢劫核心要素。画面昏暗可能导致误判，但基于可见行为细节，无法支持任何犯罪指控。置信度0.1表示极低可疑性，仅因画面模糊和单视角存在微小不确定性。"
+}
+==================================================
+
+[VLM 判定] 正常或威胁程度低 (Status: normal, Conf: 0.1)
+
+[VLM] 触发验证任务 | ID: 7 | 类型: Abuse | 范围: 2551-3750 (85.0s-125.0s)
+[VLM] 正在调用 qwen3-vl-plus (ID: 7, 片段: 2551-3750, 共 1200 帧)...
+
+==================================================
+ VLM 分析报告 (2071-2760 | 69.0s-92.0s)
+--------------------------------------------------
+{
+    "status": "normal",
+    "alarm_confidence": 0.1,
+    "description": "视频显示一个昏暗的室内房间（疑似卧室或护理室），墙上挂有花卉画作，左侧有小桌和电源插座。两名女性在床边活动：一人穿深色衣服、头发盘起，另一人穿浅色上衣、长发；她们协同为床上躺着的一位年长者（或病人）整理被褥、衣物或进行照护动作。动作连贯、无对抗性，包括递送物品、拉扯床单、调整体位等，整体呈现日常护理场景。无暴力、抢夺、威胁或入侵迹象。",
+    "dl_validation": "模型初步判定为Robbery不成立。视频中无人表现出恐惧、抵抗或被迫交出财物；无财物转移行为；人物互动协作而非对抗；环境为家庭/护理场所，非入侵场景。该判定属于误报，可能因低光照下轮廓模糊导致AI误判为‘强行控制’或‘抢夺’。",
+    "other_crimes_detected": "否",
+    "reason": "所有行为均符合常规照护或家务活动特征：两人配合照顾卧床者，动作温和有序；无攻击性肢体接触、无财物夺取、无异常闯入迹象；环境布置（画作、家具、床具）支持家庭或医疗照护场景。低画质可能导致AI将正常弯腰/拉扯动作误解为暴力行为，但结合上下文与行为逻辑，应判定为正常活动。置信度0.1表示极轻微可疑（仅因画面模糊），但无实质犯罪证据。"
+}
+==================================================
+
+[VLM 判定] 正常或威胁程度低 (Status: normal, Conf: 0.1)
+
+[VLM] 触发验证任务 | ID: 8 | 类型: Abuse | 范围: 3751-3940 (125.0s-131.3s)
+[VLM] 正在调用 qwen3-vl-plus (ID: 8, 片段: 3751-3940, 共 180 帧)...
+
+==================================================
+ VLM 分析报告 (1831-2280 | 61.0s-76.0s)
+--------------------------------------------------
+{
+    "status": "normal",
+    "alarm_confidence": 0.2,
+    "description": "视频显示一个室内场景（疑似卧室或护理室），墙上挂有带花卉图案的装裱画，左侧有电源插座和小桌。两名女性在床边活动：一名穿深色上衣、头发盘起的女性长期弯腰，似乎在整理或照料床上的人/物；另一名穿浅色上衣的女性站在床右侧，间歇性俯身协助。两人动作协调，无明显对抗或强迫迹象。第12秒左右，深色衣女性直起身，手中持一白色布状物（可能是毛巾或衣物），转向床边继续操作。全程未见推搡、击打、掐颈、拉拽等暴力动作；床上对象（可能为卧床者）未表现出挣扎、躲避或痛苦反应；环境安静，无异常声响或物品损坏。",
+    "dl_validation": "模型初步判定为'Abuse'缺乏足够证据支持。视频中行为更符合日常照护（如协助老人/病人翻身、换衣、清洁等），动作轻柔、有协作性，不符合虐待定义中的‘有力殴打’‘强制攻击’‘受害者防御/痛苦反应’等核心要素。",
+    "other_crimes_detected": "none",
+    "reason": "1）无暴力接触：所有身体接触均为支撑性或协助性，无突然发力或冲击动作；2）无受害反应：被照料对象未显现恐惧、躲闪或痛苦；3）环境与行为一致：家庭式布置+护理类动作组合高度吻合日常照护场景；4）时间序列连贯：动作平缓、持续，无冲突升级迹象。仅因画面昏暗、人物剪影化可能导致误判，但客观证据不支持abuse结论。置信度0.2表示极低可疑性，属正常生活片段。"
+}
+==================================================
+
+[VLM 判定] 正常或威胁程度低 (Status: normal, Conf: 0.2)
+
+==================================================
+ VLM 分析报告 (3751-3940 | 125.0s-131.3s)
+--------------------------------------------------
+{
+    "status": "normal",
+    "alarm_confidence": 0.2,
+    "description": "视频显示一个昏暗的室内房间（疑似医院病房或护理室，有金属床栏、墙上挂画、床头柜及医疗设备插座），一名赤裸上身的年长者坐在病床上，动作缓慢；另一人影（轮廓模糊）短暂出现在画面左侧并迅速离开。随后年长者在床边调整姿势，似乎在整理衣物或被褥，无明显剧烈动作或互动。整个过程持续约5秒，光线昏暗，画面分辨率低，无法清晰辨识面部表情、具体手部动作细节或是否存在接触行为。",
+    "dl_validation": "模型初步判定为'Abuse'缺乏充分依据：未观察到明确的暴力动作（如殴打、推搡、掐颈等）；受害者无防御、躲避、哭泣或痛苦反应；无强制性身体接触证据；环境虽为室内，但更接近医疗/照护场景而非典型家庭环境；人物行为符合日常起居活动特征（如坐起、整理衣物）。因此，该判定应被否定。",
+    "other_crimes_detected": "none",
+    "reason": "视频中仅呈现一人静坐、另一人短暂经过的静态场景，无任何攻击性动作、冲突迹象或财产侵害行为。低画质可能导致误判，但基于可见信息，所有行为均属正常生活范畴。置信度0.2反映存在轻微可疑（因光线差、人物剪影模糊），但不足以支持异常或犯罪结论。"
+}
+==================================================
+
+[VLM 判定] 正常或威胁程度低 (Status: normal, Conf: 0.2)
+
+==================================================
+ VLM 分析报告 (2551-3750 | 85.0s-125.0s)
+--------------------------------------------------
+{
+    "status": "normal",
+    "alarm_confidence": 0.2,
+    "description": "视频显示一个昏暗的室内房间（疑似医院病房或护理室，有病床、床栏、墙上挂画及床头柜），一名卧床者（看似年长者）躺在病床上。两名站立者（剪影为主，面部不可辨）在床边活动：其中一人（左侧）多次弯腰、伸手触碰卧床者身体或被褥；另一人（右侧）也靠近床边，似乎协助整理被子或调整卧床者姿势。卧床者有轻微肢体动作（如抬手、翻身），未见明显挣扎、防御或痛苦表情。整个过程持续约40秒，无暴力冲击动作（如击打、推搡、掐捏等），也无物品破坏或异常闯入迹象。",
+    "dl_validation": "模型初步判定为Abuse缺乏充分依据。视频中虽有近距离接触与身体干预，但动作幅度小、节奏平缓，符合护理/照护行为特征（如协助翻身、盖被、检查状态）。卧床者未表现出恐惧、躲避或反抗，环境亦非典型家庭住宅（更似医疗机构），不符合‘家庭环境中针对弱势成员的真实虐待’定义。",
+    "other_crimes_detected": "none",
+    "reason": "1）动作性质：所有接触均为轻柔、支撑性操作，无突然发力或攻击性轨迹；2）受害者反应：卧床者配合或被动接受，无哭喊、蜷缩、躲闪等创伤信号；3）环境线索：病床+床栏+墙上医疗风格挂画，提示为护理场景而非家庭私密空间；4）光照与画质限制导致细节模糊，但无任何可见伤痕、血迹或强制约束证据。综合判断为正常照护行为，模型误报可能性高。"
+}
+==================================================
+
+[VLM 判定] 正常或威胁程度低 (Status: normal, Conf: 0.2)

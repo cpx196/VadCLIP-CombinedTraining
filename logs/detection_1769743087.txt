@@ -1,0 +1,177 @@
+正在初始化深度检测模型 (VadCLIP)...
+/home/chenpengxu/VadCLIP/pipeline.py:86: FutureWarning: You are using `torch.load` with `weights_only=False` (the current default value), which uses the default pickle module implicitly. It is possible to construct malicious pickle data which will execute arbitrary code during unpickling (See https://github.com/pytorch/pytorch/blob/main/SECURITY.md#untrusted-models for more details). In a future release, the default value for `weights_only` will be flipped to `True`. This limits the functions that could be executed during unpickling. Arbitrary objects will no longer be allowed to be loaded via this mode unless they are explicitly allowlisted by the user via `torch.serialization.add_safe_globals`. We recommend you start setting `weights_only=True` for any use case where you don't have full control of the loaded file. Please open an issue on GitHub for any issues related to this experimental feature.
+  model_param = torch.load(VIOLENCE_MODEL_PATH, map_location=DEVICE)
+==================================================
+ 视频异常检测系统已启动 (搜索目录: /home/chenpengxu/VadCLIP/test_video)
+==================================================
+
+当前可用视频：
+ 1. test_video_stealing.mp4
+ 2. test_video_long.mp4
+ 3. Abuse044_x264.mp4
+ 4. test_video_fake_arson.mp4
+ 5. test_video_shooting.mp4
+ 6. test_video_assault.mp4
+ 7. test_video_arson.mp4
+ 8. test_video_fake_burglary.mp4
+ 9. test_video_normal.mp4
+ 10. test_video_robbery.mp4
+ 11. Stealing017_x264.mp4
+ 12. test_video_burglary.mp4
+ 13. test_video_fighting.mp4
+ 14. test_video_robbery2.mp4
+ 15. test_video_fake_shooting.mp4
+ 16. Normal_Videos396_x264.mp4
+ 17. test_video_long2.mp4
+
+请输入视频编号或文件名 (输入 'q' 退出): 
+开始播放与检测流... (视频 FPS: 30.0, 窗口: 10s, 步长: 1s, 按 'q' 键退出)
+[Window 0001-0300 | 0.0s-10.0s] Normal: 0.970 | Abnormal: 0.030 | AvgProb: 0.01 | Hits: 0/4 ---
+  └─ Top-K Categories: Shoplifting:0.01, Robbery:0.00, Burglary:0.00, RoadAccidents:0.00, Abuse:0.00
+[Window 0031-0330 | 1.0s-11.0s] Normal: 0.971 | Abnormal: 0.029 | AvgProb: 0.01 | Hits: 0/4 ---
+  └─ Top-K Categories: Shoplifting:0.01, Robbery:0.00, Burglary:0.00, RoadAccidents:0.00, Abuse:0.00
+[Window 0061-0360 | 2.0s-12.0s] Normal: 0.972 | Abnormal: 0.028 | AvgProb: 0.01 | Hits: 0/4 ---
+  └─ Top-K Categories: Shoplifting:0.01, Robbery:0.00, Burglary:0.00, RoadAccidents:0.00, Abuse:0.00
+[Window 0091-0390 | 3.0s-13.0s] Normal: 0.974 | Abnormal: 0.026 | AvgProb: 0.01 | Hits: 0/4 ---
+  └─ Top-K Categories: Shoplifting:0.01, Robbery:0.00, Burglary:0.00, RoadAccidents:0.00, Abuse:0.00
+[Window 0121-0420 | 4.0s-14.0s] Normal: 0.977 | Abnormal: 0.023 | AvgProb: 0.01 | Hits: 0/4 ---
+  └─ Top-K Categories: Shoplifting:0.01, Robbery:0.00, RoadAccidents:0.00, Burglary:0.00, Abuse:0.00
+[Window 0151-0450 | 5.0s-15.0s] Normal: 0.978 | Abnormal: 0.022 | AvgProb: 0.01 | Hits: 0/4 ---
+  └─ Top-K Categories: Shoplifting:0.01, Robbery:0.00, RoadAccidents:0.00, Burglary:0.00, Abuse:0.00
+[Window 0181-0480 | 6.0s-16.0s] Normal: 0.953 | Abnormal: 0.047 | AvgProb: 0.01 | Hits: 0/4 ---
+  └─ Top-K Categories: Shoplifting:0.01, Robbery:0.01, Burglary:0.01, RoadAccidents:0.00, Abuse:0.00
+[Window 0211-0510 | 7.0s-17.0s] Normal: 0.903 | Abnormal: 0.097 | AvgProb: 0.03 | Hits: 0/4 ---
+  └─ Top-K Categories: Shoplifting:0.03, Robbery:0.02, Burglary:0.01, RoadAccidents:0.01, Abuse:0.01
+[Window 0241-0540 | 8.0s-18.0s] Normal: 0.606 | Abnormal: 0.394 | AvgProb: 0.11 | Hits: 0/4 ---
+  └─ Top-K Categories: Shoplifting:0.11, Robbery:0.10, Burglary:0.06, Abuse:0.03, Shooting:0.03
+[Window 0271-0570 | 9.0s-19.0s] Normal: 0.187 | Abnormal: 0.813 | AvgProb: 0.26 | Hits: 1/4 [Robbery]
+  └─ Top-K Categories: Robbery:0.26, Shoplifting:0.16, Burglary:0.12, Shooting:0.07, Abuse:0.05
+[Window 0301-0600 | 10.0s-20.0s] Normal: 0.206 | Abnormal: 0.794 | AvgProb: 0.25 | Hits: 2/4 [Robbery]
+  └─ Top-K Categories: Robbery:0.25, Shoplifting:0.14, Burglary:0.11, Shooting:0.07, Abuse:0.05
+[Window 0331-0630 | 11.0s-21.0s] Normal: 0.184 | Abnormal: 0.816 | AvgProb: 0.26 | Hits: 3/4 [Robbery]
+  └─ Top-K Categories: Robbery:0.26, Shoplifting:0.14, Burglary:0.12, Shooting:0.06, Abuse:0.05
+[Window 0361-0660 | 12.0s-22.0s] Normal: 0.225 | Abnormal: 0.775 | AvgProb: 0.23 | Hits: 4/4 [Robbery]
+  └─ Top-K Categories: Robbery:0.23, Shoplifting:0.14, Burglary:0.11, Shooting:0.06, Abuse:0.05
+  └─ [事件开始] 连续命中 4 次，开始收集视频片段...
+[Window 0391-0690 | 13.0s-23.0s] Normal: 0.223 | Abnormal: 0.777 | AvgProb: 0.22 | Hits: 5/4 [Robbery]
+  └─ Top-K Categories: Robbery:0.22, Shoplifting:0.13, Burglary:0.11, Shooting:0.06, Abuse:0.05
+[Window 0421-0720 | 14.0s-24.0s] Normal: 0.104 | Abnormal: 0.896 | AvgProb: 0.25 | Hits: 6/4 [Robbery]
+  └─ Top-K Categories: Robbery:0.25, Burglary:0.14, Shoplifting:0.12, Shooting:0.07, Explosion:0.06
+[Window 0451-0750 | 15.0s-25.0s] Normal: 0.090 | Abnormal: 0.910 | AvgProb: 0.23 | Hits: 7/4 [Robbery]
+  └─ Top-K Categories: Robbery:0.23, Burglary:0.13, Shoplifting:0.10, Explosion:0.08, Shooting:0.08
+[Window 0481-0780 | 16.0s-26.0s] Normal: 0.089 | Abnormal: 0.911 | AvgProb: 0.20 | Hits: 8/4 [Robbery]
+  └─ Top-K Categories: Robbery:0.20, Burglary:0.13, Explosion:0.10, Shoplifting:0.10, Shooting:0.08
+  └─ [事件结束] 类别变更: Robbery -> Explosion. 发送 VLM 申请...
+[Window 0511-0810 | 17.0s-27.0s] Normal: 0.104 | Abnormal: 0.896 | AvgProb: 0.17 | Hits: 1/4 [Explosion]
+[VLM] 触发验证任务 | ID: 1 | 类型: Robbery | 范围: 361-810 (12.0s-27.0s)
+  └─ Top-K Categories: Explosion:0.17, Robbery:0.15, Burglary:0.10, Shoplifting:0.08, Shooting:0.07
+
+[Window 0541-0840 | 18.0s-28.0s] Normal: 0.066 | Abnormal: 0.934 | AvgProb: 0.18 | Hits: 1/4 [Robbery]
+  └─ Top-K Categories: Robbery:0.18, Explosion:0.17, Burglary:0.11, Shooting:0.08, Shoplifting:0.07
+[VLM] 正在调用 qwen3-vl-plus (ID: 1, 片段: 0361-0810, 共 420 帧)...
+[Window 0571-0870 | 19.0s-29.0s] Normal: 0.059 | Abnormal: 0.941 | AvgProb: 0.32 | Hits: 1/4 [Explosion]
+  └─ Top-K Categories: Explosion:0.32, Robbery:0.10, RoadAccidents:0.08, Burglary:0.07, Shooting:0.07
+[Window 0601-0900 | 20.0s-30.0s] Normal: 0.080 | Abnormal: 0.920 | AvgProb: 0.30 | Hits: 2/4 [Explosion]
+  └─ Top-K Categories: Explosion:0.30, RoadAccidents:0.13, Robbery:0.07, Burglary:0.06, Vandalism:0.06
+[Window 0631-0930 | 21.0s-31.0s] Normal: 0.080 | Abnormal: 0.920 | AvgProb: 0.31 | Hits: 3/4 [Explosion]
+  └─ Top-K Categories: Explosion:0.31, RoadAccidents:0.12, Robbery:0.08, Burglary:0.07, Vandalism:0.06
+[Window 0661-0960 | 22.0s-32.0s] Normal: 0.083 | Abnormal: 0.917 | AvgProb: 0.31 | Hits: 4/4 [Explosion]
+  └─ Top-K Categories: Explosion:0.31, RoadAccidents:0.13, Robbery:0.07, Burglary:0.06, Vandalism:0.06
+  └─ [事件开始] 连续命中 4 次，开始收集视频片段...
+[Window 0691-0990 | 23.0s-33.0s] Normal: 0.108 | Abnormal: 0.892 | AvgProb: 0.28 | Hits: 5/4 [Explosion]
+  └─ Top-K Categories: Explosion:0.28, RoadAccidents:0.11, Robbery:0.08, Burglary:0.07, Vandalism:0.06
+[Window 0721-1020 | 24.0s-34.0s] Normal: 0.120 | Abnormal: 0.880 | AvgProb: 0.27 | Hits: 6/4 [Explosion]
+  └─ Top-K Categories: Explosion:0.27, RoadAccidents:0.11, Robbery:0.08, Burglary:0.07, Vandalism:0.06
+[Window 0751-1050 | 25.0s-35.0s] Normal: 0.145 | Abnormal: 0.855 | AvgProb: 0.24 | Hits: 7/4 [Explosion]
+  └─ Top-K Categories: Explosion:0.24, RoadAccidents:0.11, Robbery:0.08, Burglary:0.07, Vandalism:0.06
+[Window 0781-1080 | 26.0s-36.0s] Normal: 0.158 | Abnormal: 0.842 | AvgProb: 0.24 | Hits: 8/4 [Explosion]
+  └─ Top-K Categories: Explosion:0.24, RoadAccidents:0.11, Robbery:0.08, Burglary:0.06, Vandalism:0.06
+[Window 0811-1110 | 27.0s-37.0s] Normal: 0.134 | Abnormal: 0.866 | AvgProb: 0.27 | Hits: 9/4 [Explosion]
+  └─ Top-K Categories: Explosion:0.27, RoadAccidents:0.09, Robbery:0.09, Burglary:0.07, Shooting:0.06
+[Window 0841-1140 | 28.0s-38.0s] Normal: 0.103 | Abnormal: 0.897 | AvgProb: 0.31 | Hits: 10/4 [Explosion]
+  └─ Top-K Categories: Explosion:0.31, RoadAccidents:0.10, Robbery:0.09, Shooting:0.06, Burglary:0.06
+[Window 0871-1170 | 29.0s-39.0s] Normal: 0.120 | Abnormal: 0.880 | AvgProb: 0.28 | Hits: 11/4 [Explosion]
+  └─ Top-K Categories: Explosion:0.28, RoadAccidents:0.10, Robbery:0.09, Shooting:0.06, Burglary:0.06
+[Window 0901-1200 | 30.0s-40.0s] Normal: 0.104 | Abnormal: 0.896 | AvgProb: 0.29 | Hits: 12/4 [Explosion]
+  └─ Top-K Categories: Explosion:0.29, Robbery:0.11, RoadAccidents:0.09, Shooting:0.07, Shoplifting:0.06
+[Window 0931-1230 | 31.0s-41.0s] Normal: 0.084 | Abnormal: 0.916 | AvgProb: 0.32 | Hits: 13/4 [Explosion]
+  └─ Top-K Categories: Explosion:0.32, Robbery:0.11, RoadAccidents:0.09, Shooting:0.07, Shoplifting:0.06
+[Window 0961-1260 | 32.0s-42.0s] Normal: 0.096 | Abnormal: 0.904 | AvgProb: 0.28 | Hits: 14/4 [Explosion]
+  └─ Top-K Categories: Explosion:0.28, Robbery:0.12, RoadAccidents:0.08, Shooting:0.08, Shoplifting:0.07
+[Window 0991-1290 | 33.0s-43.0s] Normal: 0.099 | Abnormal: 0.901 | AvgProb: 0.27 | Hits: 15/4 [Explosion]
+  └─ Top-K Categories: Explosion:0.27, Robbery:0.12, Shooting:0.08, RoadAccidents:0.08, Shoplifting:0.07
+[Window 1021-1320 | 34.0s-44.0s] Normal: 0.087 | Abnormal: 0.913 | AvgProb: 0.27 | Hits: 16/4 [Explosion]
+  └─ Top-K Categories: Explosion:0.27, Robbery:0.12, Shooting:0.09, RoadAccidents:0.08, Shoplifting:0.07
+[Window 1051-1350 | 35.0s-45.0s] Normal: 0.086 | Abnormal: 0.914 | AvgProb: 0.22 | Hits: 17/4 [Explosion]
+  └─ Top-K Categories: Explosion:0.22, Robbery:0.15, Shooting:0.09, Shoplifting:0.08, Burglary:0.07
+[Window 1081-1380 | 36.0s-46.0s] Normal: 0.068 | Abnormal: 0.932 | AvgProb: 0.22 | Hits: 18/4 [Explosion]
+  └─ Top-K Categories: Explosion:0.22, Robbery:0.16, Shooting:0.09, Shoplifting:0.07, Burglary:0.07
+[Window 1111-1410 | 37.0s-47.0s] Normal: 0.089 | Abnormal: 0.911 | AvgProb: 0.25 | Hits: 19/4 [Explosion]
+  └─ Top-K Categories: Explosion:0.25, Robbery:0.13, Shooting:0.09, RoadAccidents:0.07, Shoplifting:0.07
+[Window 1141-1440 | 38.0s-48.0s] Normal: 0.111 | Abnormal: 0.889 | AvgProb: 0.27 | Hits: 20/4 [Explosion]
+  └─ Top-K Categories: Explosion:0.27, Robbery:0.11, Shooting:0.08, RoadAccidents:0.08, Shoplifting:0.07
+[Window 1171-1470 | 39.0s-49.0s] Normal: 0.134 | Abnormal: 0.866 | AvgProb: 0.24 | Hits: 21/4 [Explosion]
+  └─ Top-K Categories: Explosion:0.24, Robbery:0.12, Shooting:0.08, RoadAccidents:0.08, Shoplifting:0.07
+[Window 1201-1500 | 40.0s-50.0s] Normal: 0.156 | Abnormal: 0.844 | AvgProb: 0.27 | Hits: 22/4 [Explosion]
+  └─ Top-K Categories: Explosion:0.27, RoadAccidents:0.10, Robbery:0.09, Shooting:0.07, Shoplifting:0.06
+[Window 1231-1530 | 41.0s-51.0s] Normal: 0.220 | Abnormal: 0.780 | AvgProb: 0.24 | Hits: 23/4 [Explosion]
+  └─ Top-K Categories: Explosion:0.24, RoadAccidents:0.09, Robbery:0.09, Shoplifting:0.06, Shooting:0.06
+[Window 1261-1560 | 42.0s-52.0s] Normal: 0.218 | Abnormal: 0.782 | AvgProb: 0.26 | Hits: 24/4 [Explosion]
+  └─ Top-K Categories: Explosion:0.26, RoadAccidents:0.10, Robbery:0.07, Shooting:0.06, Shoplifting:0.06
+[Window 1291-1590 | 43.0s-53.0s] Normal: 0.282 | Abnormal: 0.718 | AvgProb: 0.23 | Hits: 25/4 [Explosion]
+  └─ Top-K Categories: Explosion:0.23, RoadAccidents:0.11, Robbery:0.07, Shoplifting:0.06, Shooting:0.05
+  └─ [事件结束] 置信度降低 (0.15 < 0.15). 发送 VLM 申请...
+[Window 1321-1620 | 44.0s-54.0s] Normal: 0.300 | Abnormal: 0.700 | AvgProb: 0.15 | Hits: 0/4 ---
+[VLM] 触发验证任务 | ID: 2 | 类型: Explosion | 范围: 661-1620 (22.0s-54.0s)
+  └─ Top-K Categories: Explosion:0.15, Robbery:0.10, Shoplifting:0.08, RoadAccidents:0.07, Burglary:0.06
+
+[Window 1351-1650 | 45.0s-55.0s] Normal: 0.394 | Abnormal: 0.606 | AvgProb: 0.13 | Hits: 0/4 ---
+  └─ Top-K Categories: Explosion:0.13, RoadAccidents:0.09, Shoplifting:0.08, Robbery:0.07, Burglary:0.05
+[Window 1381-1680 | 46.0s-56.0s] Normal: 0.485 | Abnormal: 0.515 | AvgProb: 0.09 | Hits: 0/4 ---
+  └─ Top-K Categories: Explosion:0.09, RoadAccidents:0.08, Shoplifting:0.08, Robbery:0.06, Burglary:0.04
+[Window 1411-1710 | 47.0s-57.0s] Normal: 0.528 | Abnormal: 0.472 | AvgProb: 0.08 | Hits: 0/4 ---
+  └─ Top-K Categories: Shoplifting:0.08, Explosion:0.07, RoadAccidents:0.07, Robbery:0.06, Burglary:0.05
+[VLM] 正在调用 qwen3-vl-plus (ID: 2, 片段: 0661-1620, 共 930 帧)...
+[Window 1441-1740 | 48.0s-58.0s] Normal: 0.687 | Abnormal: 0.313 | AvgProb: 0.06 | Hits: 0/4 ---
+  └─ Top-K Categories: Shoplifting:0.06, Robbery:0.04, RoadAccidents:0.04, Burglary:0.04, Explosion:0.03
+[Window 1471-1770 | 49.0s-59.0s] Normal: 0.628 | Abnormal: 0.372 | AvgProb: 0.08 | Hits: 0/4 ---
+  └─ Top-K Categories: Shoplifting:0.08, Robbery:0.06, Burglary:0.05, RoadAccidents:0.04, Shooting:0.03
+[Window 1501-1800 | 50.0s-60.0s] Normal: 0.670 | Abnormal: 0.330 | AvgProb: 0.08 | Hits: 0/4 ---
+  └─ Top-K Categories: Shoplifting:0.08, Robbery:0.05, Burglary:0.05, RoadAccidents:0.03, Shooting:0.02
+[Window 1531-1830 | 51.0s-61.0s] Normal: 0.640 | Abnormal: 0.360 | AvgProb: 0.09 | Hits: 0/4 ---
+  └─ Top-K Categories: Shoplifting:0.09, Robbery:0.07, Burglary:0.06, Abuse:0.03, RoadAccidents:0.02
+[Window 1561-1860 | 52.0s-62.0s] Normal: 0.681 | Abnormal: 0.319 | AvgProb: 0.08 | Hits: 0/4 ---
+  └─ Top-K Categories: Shoplifting:0.08, Robbery:0.05, Burglary:0.05, RoadAccidents:0.03, Shooting:0.02
+[Window 1591-1890 | 53.0s-63.0s] Normal: 0.792 | Abnormal: 0.208 | AvgProb: 0.06 | Hits: 0/4 ---
+  └─ Top-K Categories: Shoplifting:0.06, Robbery:0.04, Burglary:0.03, Abuse:0.02, RoadAccidents:0.01
+
+==================================================
+ VLM 分析报告 (361-810 | 12.0s-27.0s)
+--------------------------------------------------
+{
+    "status": "abnormal",
+    "alarm_confidence": 0.95,
+    "description": "监控画面显示一家商店内部（非家庭环境，但按题设需分析）。时间戳为2016年某周一上午10:48:56。初始画面中，一人倒在地上（疑似被击倒），另一人位于远处柜台后方。约4秒时，一名白发男子从左侧冲入画面，迅速扑向柜台，同时画面中突然爆发大量白色烟尘/粉末（疑似催泪瓦斯、干粉灭火器或爆炸性粉尘），导致能见度急剧下降。该男子在烟尘中持续移动，似乎在翻找或夺取柜台内物品；随后另一人（穿深色衣）从右侧进入烟尘区域，在柜台后方活动。整个过程持续约9秒，期间无清晰对话或警报声，但行为具有突发性、暴力性和目标导向性。",
+    "dl_validation": "模型判定为Robbery基本正确：存在明显暴力行为（一人倒地）、强行闯入与夺取财物意图（冲向柜台、翻找动作）、公开对抗性（不隐蔽，直接面对现场人员）、伴随制造混乱手段（释放烟尘）。符合抢劫定义的多个核心要素。",
+    "other_crimes_detected": "是：人身攻击(assault)、财产破坏(vandalism)——倒地者表明遭受攻击；烟尘释放可能构成故意破坏经营环境或使用违禁装置；另可能存在非法入侵(burglary)前提（若非授权人员进入）。",
+    "reason": "视频中可见明确暴力结果（一人倒地）、主动攻击性闯入行为（白发男子高速冲入并扑向柜台）、制造混乱手段（突发大量烟尘，极可能为人为释放以压制反抗或遮蔽视线），以及后续多人在烟尘中对柜台区域的针对性操作，高度符合‘公开、暴力、面对面夺取财物’的抢劫特征。尽管未清晰看到财物被拿走，但行为模式与抢劫高度一致，且排除了普通意外或误操作可能性（如烟尘非火灾自然产生，而是瞬间爆发且伴随攻击动作）。因此判定为abnormal，置信度0.95。"
+}
+==================================================
+
+[警报生效] 检测到真实威胁：ROBBERY 
+警报级别: 0.95 | 理由: 视频中可见明确暴力结果（一人倒地）、主动攻击性闯入行为（白发男子高速冲入并扑向柜台）、制造混乱手段（突发大量烟尘，极可能为人为释放以压制反抗或遮蔽视线），以及后续多人在烟尘中对柜台区域的针对性操作，高度符合‘公开、暴力、面对面夺取财物’的抢劫特征。尽管未清晰看到财物被拿走，但行为模式与抢劫高度一致，且排除了普通意外或误操作可能性（如烟尘非火灾自然产生，而是瞬间爆发且伴随攻击动作）。因此判定为abnormal，置信度0.95。
+
+==================================================
+ VLM 分析报告 (661-1620 | 22.0s-54.0s)
+--------------------------------------------------
+{
+    "status": "normal",
+    "alarm_confidence": 0.1,
+    "description": "视频显示一个室内商业场所（疑似珠宝店或电子产品店），环境充满浓雾或烟尘，能见度低。时间戳为2016年某周一上午10:49左右。画面中可见中央柜台、玻璃展示柜、工具柜和高脚凳。从0:01到0:30，有数名人员在烟雾中快速穿行：有人从右侧进入，有人从左侧进入，有人在柜台后方移动；其中一人（约0:15）身穿深色外套、戴帽子，手持物品快速经过柜台前方；另一人（约0:17）从左侧冲入，动作急促但未见明确攻击或破坏行为。整个过程中无闪光、火焰、爆炸冲击波、物体飞散或结构坍塌等现象；烟雾持续存在但未加剧或消散，可能为喷雾系统启动、干冰、或监控镜头被污染/起雾所致。",
+    "dl_validation": "模型判定'Explosion'不成立。视频中无任何爆炸特征：无闪光、无冲击波、无碎片四溅、无结构损坏；烟雾虽浓，但分布均匀、无方向性扩散，不符合爆炸产生的瞬时高压气流效应。人员反应为快速移动而非躲避冲击，更符合‘紧急疏散’或‘误触发警报后撤离’场景，而非爆炸现场。",
+    "other_crimes_detected": false,
+    "reason": "尽管人员行动迅速且环境异常（烟雾弥漫），但视频中未观察到任何确凿的犯罪行为：无暴力接触、无撬砸展示柜、无拿取商品后逃离的清晰证据（因能见度低无法确认是否携带物品）、无持械、无胁迫语言或手势。所有人员动作均在画面边缘或模糊区域完成，无法认定为盗窃、抢劫或破坏。最合理解释是火灾报警系统误触发（如烟感误报）导致喷雾释放或人员疏散演练。依据证据导向原则，无直接犯罪证据即应判为normal；置信度0.1反映存在轻微可疑（烟雾+快速移动），但远不足以支持abnormal判定。"
+}
+==================================================
+
+[VLM 判定] 正常或威胁程度低 (Status: normal, Conf: 0.1)

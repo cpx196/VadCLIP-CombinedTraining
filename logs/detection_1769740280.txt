@@ -1,0 +1,101 @@
+正在初始化深度检测模型 (VadCLIP)...
+/home/chenpengxu/VadCLIP/pipeline.py:86: FutureWarning: You are using `torch.load` with `weights_only=False` (the current default value), which uses the default pickle module implicitly. It is possible to construct malicious pickle data which will execute arbitrary code during unpickling (See https://github.com/pytorch/pytorch/blob/main/SECURITY.md#untrusted-models for more details). In a future release, the default value for `weights_only` will be flipped to `True`. This limits the functions that could be executed during unpickling. Arbitrary objects will no longer be allowed to be loaded via this mode unless they are explicitly allowlisted by the user via `torch.serialization.add_safe_globals`. We recommend you start setting `weights_only=True` for any use case where you don't have full control of the loaded file. Please open an issue on GitHub for any issues related to this experimental feature.
+  model_param = torch.load(VIOLENCE_MODEL_PATH, map_location=DEVICE)
+==================================================
+ 视频异常检测系统已启动 (搜索目录: /home/chenpengxu/VadCLIP/test_video)
+==================================================
+
+当前可用视频：
+ 1. test_video_stealing.mp4
+ 2. test_video_long.mp4
+ 3. test_video_fake_arson.mp4
+ 4. test_video_shooting.mp4
+ 5. test_video_assault.mp4
+ 6. test_video_arson.mp4
+ 7. test_video_fake_burglary.mp4
+ 8. test_video_normal.mp4
+ 9. test_video_robbery.mp4
+ 10. Stealing017_x264.mp4
+ 11. test_video_burglary.mp4
+ 12. test_video_fighting.mp4
+ 13. test_video_robbery2.mp4
+ 14. test_video_fake_shooting.mp4
+ 15. Normal_Videos396_x264.mp4
+ 16. test_video_long2.mp4
+
+请输入视频编号或文件名 (输入 'q' 退出): 
+开始播放与检测流... (视频 FPS: 30.0, 窗口: 10s, 步长: 1s, 按 'q' 键退出)
+[Window 0001-0300 | 0.0s-10.0s] Normal: 0.961 | Abnormal: 0.039 | AvgProb: 0.01 | Hits: 0/4 ---
+  └─ Top-K Categories: Abuse:0.01, Robbery:0.01, Fighting:0.00, Burglary:0.00, Shoplifting:0.00
+[Window 0031-0330 | 1.0s-11.0s] Normal: 0.938 | Abnormal: 0.062 | AvgProb: 0.01 | Hits: 0/4 ---
+  └─ Top-K Categories: Abuse:0.01, Robbery:0.01, Fighting:0.01, Burglary:0.01, Shoplifting:0.01
+[Window 0061-0360 | 2.0s-12.0s] Normal: 0.866 | Abnormal: 0.134 | AvgProb: 0.03 | Hits: 0/4 ---
+  └─ Top-K Categories: Robbery:0.03, Abuse:0.03, Fighting:0.02, Burglary:0.01, Shoplifting:0.01
+[Window 0091-0390 | 3.0s-13.0s] Normal: 0.759 | Abnormal: 0.241 | AvgProb: 0.06 | Hits: 0/4 ---
+  └─ Top-K Categories: Robbery:0.06, Abuse:0.05, Fighting:0.03, Burglary:0.02, Assault:0.01
+[Window 0121-0420 | 4.0s-14.0s] Normal: 0.628 | Abnormal: 0.372 | AvgProb: 0.09 | Hits: 0/4 ---
+  └─ Top-K Categories: Robbery:0.09, Abuse:0.08, Fighting:0.05, Burglary:0.03, Assault:0.02
+[Window 0151-0450 | 5.0s-15.0s] Normal: 0.492 | Abnormal: 0.508 | AvgProb: 0.11 | Hits: 0/4 ---
+  └─ Top-K Categories: Robbery:0.11, Abuse:0.10, Fighting:0.09, Burglary:0.04, Assault:0.03
+[Window 0181-0480 | 6.0s-16.0s] Normal: 0.343 | Abnormal: 0.657 | AvgProb: 0.14 | Hits: 0/4 ---
+  └─ Top-K Categories: Robbery:0.14, Abuse:0.13, Fighting:0.12, Burglary:0.05, Assault:0.04
+[Window 0211-0510 | 7.0s-17.0s] Normal: 0.334 | Abnormal: 0.666 | AvgProb: 0.14 | Hits: 0/4 ---
+  └─ Top-K Categories: Robbery:0.14, Abuse:0.13, Fighting:0.13, Burglary:0.05, Assault:0.04
+[Window 0241-0540 | 8.0s-18.0s] Normal: 0.307 | Abnormal: 0.693 | AvgProb: 0.14 | Hits: 0/4 ---
+  └─ Top-K Categories: Fighting:0.14, Robbery:0.14, Abuse:0.14, Burglary:0.06, Assault:0.04
+[Window 0271-0570 | 9.0s-19.0s] Normal: 0.265 | Abnormal: 0.735 | AvgProb: 0.16 | Hits: 1/4 [Fighting]
+  └─ Top-K Categories: Fighting:0.16, Robbery:0.14, Abuse:0.14, Burglary:0.05, Assault:0.05
+[Window 0301-0600 | 10.0s-20.0s] Normal: 0.246 | Abnormal: 0.754 | AvgProb: 0.17 | Hits: 2/4 [Fighting]
+  └─ Top-K Categories: Fighting:0.17, Robbery:0.15, Abuse:0.15, Burglary:0.06, Assault:0.05
+[Window 0331-0630 | 11.0s-21.0s] Normal: 0.189 | Abnormal: 0.811 | AvgProb: 0.17 | Hits: 1/4 [Robbery]
+  └─ Top-K Categories: Robbery:0.17, Abuse:0.16, Fighting:0.16, Burglary:0.06, Assault:0.06
+[Window 0361-0660 | 12.0s-22.0s] Normal: 0.072 | Abnormal: 0.928 | AvgProb: 0.19 | Hits: 2/4 [Robbery]
+  └─ Top-K Categories: Robbery:0.19, Abuse:0.19, Fighting:0.15, Assault:0.09, Riot:0.06
+[Window 0391-0690 | 13.0s-23.0s] Normal: 0.041 | Abnormal: 0.959 | AvgProb: 0.19 | Hits: 1/4 [Abuse]
+  └─ Top-K Categories: Abuse:0.19, Robbery:0.18, Fighting:0.16, Assault:0.11, Riot:0.09
+[Window 0421-0720 | 14.0s-24.0s] Normal: 0.033 | Abnormal: 0.967 | AvgProb: 0.19 | Hits: 1/4 [Robbery]
+  └─ Top-K Categories: Robbery:0.19, Abuse:0.19, Assault:0.13, Fighting:0.13, Riot:0.08
+[Window 0451-0750 | 15.0s-25.0s] Normal: 0.023 | Abnormal: 0.977 | AvgProb: 0.19 | Hits: 1/4 [Abuse]
+  └─ Top-K Categories: Abuse:0.19, Robbery:0.18, Assault:0.15, Fighting:0.11, Riot:0.09
+[Window 0481-0780 | 16.0s-26.0s] Normal: 0.026 | Abnormal: 0.974 | AvgProb: 0.19 | Hits: 2/4 [Abuse]
+  └─ Top-K Categories: Abuse:0.19, Robbery:0.18, Assault:0.15, Fighting:0.10, Riot:0.10
+[Window 0511-0810 | 17.0s-27.0s] Normal: 0.021 | Abnormal: 0.979 | AvgProb: 0.19 | Hits: 3/4 [Abuse]
+  └─ Top-K Categories: Abuse:0.19, Robbery:0.17, Assault:0.16, Riot:0.10, Fighting:0.08
+[Window 0541-0840 | 18.0s-28.0s] Normal: 0.018 | Abnormal: 0.982 | AvgProb: 0.18 | Hits: 4/4 [Abuse]
+  └─ Top-K Categories: Abuse:0.18, Robbery:0.16, Assault:0.16, Riot:0.11, Fighting:0.08
+  └─ [事件开始] 连续命中 4 次，开始收集视频片段...
+[Window 0571-0870 | 19.0s-29.0s] Normal: 0.013 | Abnormal: 0.987 | AvgProb: 0.17 | Hits: 5/4 [Abuse]
+  └─ Top-K Categories: Abuse:0.17, Assault:0.17, Robbery:0.13, Riot:0.13, Explosion:0.10
+  └─ [事件结束] 类别变更: Abuse -> Assault. 发送 VLM 申请...
+[Window 0601-0900 | 20.0s-30.0s] Normal: 0.012 | Abnormal: 0.988 | AvgProb: 0.17 | Hits: 1/4 [Assault]
+[VLM] 触发验证任务 | ID: 1 | 类型: Abuse | 范围: 541-900 (18.0s-30.0s)
+  └─ Top-K Categories: Assault:0.17, Abuse:0.16, Explosion:0.13, Robbery:0.12, Riot:0.12
+
+[Window 0631-0930 | 21.0s-31.0s] Normal: 0.011 | Abnormal: 0.989 | AvgProb: 0.16 | Hits: 2/4 [Assault]
+  └─ Top-K Categories: Assault:0.16, Abuse:0.15, Explosion:0.13, Robbery:0.12, Riot:0.12
+[VLM] 正在调用 qwen3-vl-plus (ID: 1, 片段: 0541-0900, 共 330 帧)...
+[Window 0661-0960 | 22.0s-32.0s] Normal: 0.010 | Abnormal: 0.990 | AvgProb: 0.15 | Hits: 3/4 [Assault]
+  └─ Top-K Categories: Assault:0.15, Explosion:0.15, Abuse:0.14, Riot:0.13, Robbery:0.10
+[Window 0691-0990 | 23.0s-33.0s] Normal: 0.010 | Abnormal: 0.990 | AvgProb: 0.16 | Hits: 1/4 [Explosion]
+  └─ Top-K Categories: Explosion:0.16, Assault:0.15, Riot:0.14, Abuse:0.12, Shooting:0.10
+[Window 0721-1020 | 24.0s-34.0s] Normal: 0.008 | Abnormal: 0.992 | AvgProb: 0.17 | Hits: 2/4 [Explosion]
+  └─ Top-K Categories: Explosion:0.17, Riot:0.15, Assault:0.15, Abuse:0.11, Shooting:0.10
+[Window 0751-1050 | 25.0s-35.0s] Normal: 0.011 | Abnormal: 0.989 | AvgProb: 0.15 | Hits: 1/4 [Riot]
+  └─ Top-K Categories: Riot:0.15, Explosion:0.15, Assault:0.14, Fighting:0.13, Abuse:0.11
+[Window 0781-1080 | 26.0s-36.0s] Normal: 0.012 | Abnormal: 0.988 | AvgProb: 0.16 | Hits: 1/4 [Fighting]
+  └─ Top-K Categories: Fighting:0.16, Assault:0.14, Riot:0.14, Explosion:0.12, Abuse:0.12
+
+==================================================
+ VLM 分析报告 (541-900 | 18.0s-30.0s)
+--------------------------------------------------
+{
+    "status": "normal",
+    "alarm_confidence": 0.0,
+    "description": "视频显示一个地下通道（非家庭环境）内的监控画面：四人出现在狭窄通道中，其中一人靠墙站立，另外三人发生肢体冲突；随后一人被推倒躺在地上，另一人也被拉扯倒地，其余两人继续推搡。整个过程发生在室外公共通道（有混凝土墙面、顶灯、时间戳17:18:43），并非家庭场景（如客厅、卧室等）。无儿童、老人或家庭成员身份信息，也无明确虐待对象特征。",
+    "dl_validation": "DL模型检测为'Abuse'属于误报。原因：(1) 场景非家庭环境，不符合'家庭环境中针对家庭成员的虐待'定义；(2) 虽有暴力动作（推搡、倒地），但缺乏虐待的核心要素——针对弱势家庭成员的单向、持续性侵害；(3) 视频未显示受害者痛苦表情、求救行为或明显伤害痕迹，无法确认为真实虐待；(4) 根据系统核心原则，非家庭场景的暴力事件应优先视为误报，除非确证为家庭内部事件。",
+    "other_crimes_detected": "在'暴力冲突类'大类下：存在疑似Assault（单方攻击）和Fighting（多方打斗）行为（如推倒、拉扯、多人缠斗），但这些行为发生在公共通道，不属于本系统监控的家庭环境范畴。系统仅负责家庭安全威胁检测，此类公共空间冲突不在报警范围内，不构成系统意义上的'犯罪活动'报警依据。",
+    "reason": "本系统专用于家庭环境安全监控。视频场景为地下通道（典型公共场所），与'家庭环境'严重不符；DL模型将公共空间打斗误判为'Abuse'，违反了环境适配性原则；无证据表明涉事人员为家庭成员，亦无虐待特有的弱势对象与长期侵害特征。根据核心原则，此类非家庭场景异常必须判定为normal，置信度为0。"
+}
+==================================================
+
+[VLM 判定] 正常或威胁程度低 (Status: normal, Conf: 0.0)

@@ -1,0 +1,323 @@
+正在初始化深度检测模型 (VadCLIP)...
+/home/chenpengxu/VadCLIP/pipeline.py:86: FutureWarning: You are using `torch.load` with `weights_only=False` (the current default value), which uses the default pickle module implicitly. It is possible to construct malicious pickle data which will execute arbitrary code during unpickling (See https://github.com/pytorch/pytorch/blob/main/SECURITY.md#untrusted-models for more details). In a future release, the default value for `weights_only` will be flipped to `True`. This limits the functions that could be executed during unpickling. Arbitrary objects will no longer be allowed to be loaded via this mode unless they are explicitly allowlisted by the user via `torch.serialization.add_safe_globals`. We recommend you start setting `weights_only=True` for any use case where you don't have full control of the loaded file. Please open an issue on GitHub for any issues related to this experimental feature.
+  model_param = torch.load(VIOLENCE_MODEL_PATH, map_location=DEVICE)
+==================================================
+ 视频异常检测系统已启动 (搜索目录: /home/chenpengxu/VadCLIP/test_video)
+==================================================
+
+当前可用视频：
+ 1. test_video_stealing.mp4
+ 2. test_video_long.mp4
+ 3. test_video_fake_arson.mp4
+ 4. test_video_shooting.mp4
+ 5. test_video_assault.mp4
+ 6. test_video_arson.mp4
+ 7. test_video_fake_burglary.mp4
+ 8. test_video_normal.mp4
+ 9. test_video_robbery.mp4
+ 10. Stealing017_x264.mp4
+ 11. test_video_burglary.mp4
+ 12. test_video_fighting.mp4
+ 13. test_video_robbery2.mp4
+ 14. test_video_fake_shooting.mp4
+ 15. Normal_Videos396_x264.mp4
+ 16. test_video_long2.mp4
+
+请输入视频编号或文件名 (输入 'q' 退出): 
+开始播放与检测流... (视频 FPS: 30.0, 窗口: 10s, 步长: 1s, 按 'q' 键退出)
+[Window 0001-0300 | 0.0s-10.0s] Normal: 0.655 | Abnormal: 0.345 | AvgProb: 0.14 | Hits: 0/15 ---
+  └─ Top-K Categories: Robbery:0.14, Shoplifting:0.06, Abuse:0.04, RoadAccidents:0.03, Fighting:0.02
+[Window 0031-0330 | 1.0s-11.0s] Normal: 0.700 | Abnormal: 0.300 | AvgProb: 0.13 | Hits: 0/15 ---
+  └─ Top-K Categories: Robbery:0.13, Shoplifting:0.06, Abuse:0.03, RoadAccidents:0.02, Fighting:0.01
+[Window 0061-0360 | 2.0s-12.0s] Normal: 0.642 | Abnormal: 0.358 | AvgProb: 0.16 | Hits: 1/15 [Robbery]
+  └─ Top-K Categories: Robbery:0.16, Shoplifting:0.06, Abuse:0.04, RoadAccidents:0.02, Fighting:0.02
+[Window 0091-0390 | 3.0s-13.0s] Normal: 0.697 | Abnormal: 0.303 | AvgProb: 0.13 | Hits: 0/15 ---
+  └─ Top-K Categories: Robbery:0.13, Shoplifting:0.06, Abuse:0.04, RoadAccidents:0.02, Fighting:0.02
+[Window 0121-0420 | 4.0s-14.0s] Normal: 0.659 | Abnormal: 0.341 | AvgProb: 0.14 | Hits: 0/15 ---
+  └─ Top-K Categories: Robbery:0.14, Shoplifting:0.06, Abuse:0.04, RoadAccidents:0.02, Fighting:0.02
+[Window 0151-0450 | 5.0s-15.0s] Normal: 0.690 | Abnormal: 0.310 | AvgProb: 0.13 | Hits: 0/15 ---
+  └─ Top-K Categories: Robbery:0.13, Shoplifting:0.06, Abuse:0.04, RoadAccidents:0.02, Fighting:0.02
+[Window 0181-0480 | 6.0s-16.0s] Normal: 0.739 | Abnormal: 0.261 | AvgProb: 0.11 | Hits: 0/15 ---
+  └─ Top-K Categories: Robbery:0.11, Shoplifting:0.05, Abuse:0.03, RoadAccidents:0.02, Fighting:0.01
+[Window 0211-0510 | 7.0s-17.0s] Normal: 0.723 | Abnormal: 0.277 | AvgProb: 0.12 | Hits: 0/15 ---
+  └─ Top-K Categories: Robbery:0.12, Shoplifting:0.05, Abuse:0.03, RoadAccidents:0.02, Burglary:0.01
+[Window 0241-0540 | 8.0s-18.0s] Normal: 0.718 | Abnormal: 0.282 | AvgProb: 0.12 | Hits: 0/15 ---
+  └─ Top-K Categories: Robbery:0.12, Shoplifting:0.05, Abuse:0.03, RoadAccidents:0.02, Burglary:0.01
+[Window 0271-0570 | 9.0s-19.0s] Normal: 0.722 | Abnormal: 0.278 | AvgProb: 0.12 | Hits: 0/15 ---
+  └─ Top-K Categories: Robbery:0.12, Shoplifting:0.05, Abuse:0.03, RoadAccidents:0.02, Burglary:0.01
+[Window 0301-0600 | 10.0s-20.0s] Normal: 0.704 | Abnormal: 0.296 | AvgProb: 0.13 | Hits: 0/15 ---
+  └─ Top-K Categories: Robbery:0.13, Shoplifting:0.06, Abuse:0.03, RoadAccidents:0.02, Burglary:0.01
+[Window 0331-0630 | 11.0s-21.0s] Normal: 0.720 | Abnormal: 0.280 | AvgProb: 0.12 | Hits: 0/15 ---
+  └─ Top-K Categories: Robbery:0.12, Shoplifting:0.05, Abuse:0.03, RoadAccidents:0.02, Burglary:0.01
+[Window 0361-0660 | 12.0s-22.0s] Normal: 0.744 | Abnormal: 0.256 | AvgProb: 0.11 | Hits: 0/15 ---
+  └─ Top-K Categories: Robbery:0.11, Shoplifting:0.05, Abuse:0.03, RoadAccidents:0.02, Burglary:0.01
+[Window 0391-0690 | 13.0s-23.0s] Normal: 0.754 | Abnormal: 0.246 | AvgProb: 0.11 | Hits: 0/15 ---
+  └─ Top-K Categories: Robbery:0.11, Shoplifting:0.05, Abuse:0.03, RoadAccidents:0.02, Burglary:0.01
+[Window 0421-0720 | 14.0s-24.0s] Normal: 0.772 | Abnormal: 0.228 | AvgProb: 0.09 | Hits: 0/15 ---
+  └─ Top-K Categories: Robbery:0.09, Shoplifting:0.04, Abuse:0.02, RoadAccidents:0.02, Shooting:0.01
+[Window 0451-0750 | 15.0s-25.0s] Normal: 0.754 | Abnormal: 0.246 | AvgProb: 0.10 | Hits: 0/15 ---
+  └─ Top-K Categories: Robbery:0.10, Shoplifting:0.05, Abuse:0.03, RoadAccidents:0.02, Fighting:0.01
+[Window 0481-0780 | 16.0s-26.0s] Normal: 0.685 | Abnormal: 0.315 | AvgProb: 0.13 | Hits: 0/15 ---
+  └─ Top-K Categories: Robbery:0.13, Shoplifting:0.06, Abuse:0.03, RoadAccidents:0.03, Fighting:0.02
+[Window 0511-0810 | 17.0s-27.0s] Normal: 0.666 | Abnormal: 0.334 | AvgProb: 0.13 | Hits: 0/15 ---
+  └─ Top-K Categories: Robbery:0.13, Shoplifting:0.06, Abuse:0.03, RoadAccidents:0.03, Fighting:0.02
+[Window 0541-0840 | 18.0s-28.0s] Normal: 0.676 | Abnormal: 0.324 | AvgProb: 0.13 | Hits: 0/15 ---
+  └─ Top-K Categories: Robbery:0.13, Shoplifting:0.06, Abuse:0.03, RoadAccidents:0.03, Fighting:0.02
+[Window 0571-0870 | 19.0s-29.0s] Normal: 0.671 | Abnormal: 0.329 | AvgProb: 0.13 | Hits: 0/15 ---
+  └─ Top-K Categories: Robbery:0.13, Shoplifting:0.06, Abuse:0.03, RoadAccidents:0.03, Fighting:0.02
+[Window 0601-0900 | 20.0s-30.0s] Normal: 0.688 | Abnormal: 0.312 | AvgProb: 0.11 | Hits: 0/15 ---
+  └─ Top-K Categories: Robbery:0.11, Shoplifting:0.06, RoadAccidents:0.03, Abuse:0.03, Fighting:0.02
+[Window 0631-0930 | 21.0s-31.0s] Normal: 0.701 | Abnormal: 0.299 | AvgProb: 0.10 | Hits: 0/15 ---
+  └─ Top-K Categories: Robbery:0.10, Shoplifting:0.05, RoadAccidents:0.03, Abuse:0.03, Fighting:0.02
+[Window 0661-0960 | 22.0s-32.0s] Normal: 0.622 | Abnormal: 0.378 | AvgProb: 0.14 | Hits: 0/15 ---
+  └─ Top-K Categories: Robbery:0.14, Shoplifting:0.07, Abuse:0.04, RoadAccidents:0.04, Fighting:0.03
+[Window 0691-0990 | 23.0s-33.0s] Normal: 0.611 | Abnormal: 0.389 | AvgProb: 0.15 | Hits: 0/15 ---
+  └─ Top-K Categories: Robbery:0.15, Shoplifting:0.06, Abuse:0.04, RoadAccidents:0.03, Fighting:0.03
+[Window 0721-1020 | 24.0s-34.0s] Normal: 0.599 | Abnormal: 0.401 | AvgProb: 0.16 | Hits: 1/15 [Robbery]
+  └─ Top-K Categories: Robbery:0.16, Shoplifting:0.07, Abuse:0.05, RoadAccidents:0.03, Fighting:0.03
+[Window 0751-1050 | 25.0s-35.0s] Normal: 0.601 | Abnormal: 0.399 | AvgProb: 0.16 | Hits: 2/15 [Robbery]
+  └─ Top-K Categories: Robbery:0.16, Shoplifting:0.07, Abuse:0.05, RoadAccidents:0.03, Fighting:0.03
+[Window 0781-1080 | 26.0s-36.0s] Normal: 0.646 | Abnormal: 0.354 | AvgProb: 0.14 | Hits: 0/15 ---
+  └─ Top-K Categories: Robbery:0.14, Shoplifting:0.06, Abuse:0.04, RoadAccidents:0.03, Fighting:0.03
+[Window 0811-1110 | 27.0s-37.0s] Normal: 0.601 | Abnormal: 0.399 | AvgProb: 0.17 | Hits: 1/15 [Robbery]
+  └─ Top-K Categories: Robbery:0.17, Shoplifting:0.07, Abuse:0.05, RoadAccidents:0.03, Fighting:0.02
+[Window 0841-1140 | 28.0s-38.0s] Normal: 0.454 | Abnormal: 0.546 | AvgProb: 0.25 | Hits: 2/15 [Robbery]
+  └─ Top-K Categories: Robbery:0.25, Shoplifting:0.09, Abuse:0.07, RoadAccidents:0.03, Fighting:0.03
+[Window 0871-1170 | 29.0s-39.0s] Normal: 0.384 | Abnormal: 0.616 | AvgProb: 0.28 | Hits: 3/15 [Robbery]
+  └─ Top-K Categories: Robbery:0.28, Shoplifting:0.10, Abuse:0.08, RoadAccidents:0.03, Fighting:0.03
+[Window 0901-1200 | 30.0s-40.0s] Normal: 0.357 | Abnormal: 0.643 | AvgProb: 0.29 | Hits: 4/15 [Robbery]
+  └─ Top-K Categories: Robbery:0.29, Shoplifting:0.11, Abuse:0.09, RoadAccidents:0.03, Fighting:0.03
+[Window 0931-1230 | 31.0s-41.0s] Normal: 0.341 | Abnormal: 0.659 | AvgProb: 0.31 | Hits: 5/15 [Robbery]
+  └─ Top-K Categories: Robbery:0.31, Shoplifting:0.12, Abuse:0.09, RoadAccidents:0.03, Burglary:0.03
+[Window 0961-1260 | 32.0s-42.0s] Normal: 0.289 | Abnormal: 0.711 | AvgProb: 0.32 | Hits: 6/15 [Robbery]
+  └─ Top-K Categories: Robbery:0.32, Shoplifting:0.13, Abuse:0.09, RoadAccidents:0.04, Burglary:0.03
+[Window 0991-1290 | 33.0s-43.0s] Normal: 0.289 | Abnormal: 0.711 | AvgProb: 0.31 | Hits: 7/15 [Robbery]
+  └─ Top-K Categories: Robbery:0.31, Shoplifting:0.13, Abuse:0.09, RoadAccidents:0.04, Fighting:0.03
+[Window 1021-1320 | 34.0s-44.0s] Normal: 0.273 | Abnormal: 0.727 | AvgProb: 0.31 | Hits: 8/15 [Robbery]
+  └─ Top-K Categories: Robbery:0.31, Shoplifting:0.13, Abuse:0.09, RoadAccidents:0.04, Stealing:0.04
+[Window 1051-1350 | 35.0s-45.0s] Normal: 0.236 | Abnormal: 0.764 | AvgProb: 0.33 | Hits: 9/15 [Robbery]
+  └─ Top-K Categories: Robbery:0.33, Shoplifting:0.13, Abuse:0.09, Stealing:0.04, RoadAccidents:0.04
+[Window 1081-1380 | 36.0s-46.0s] Normal: 0.186 | Abnormal: 0.814 | AvgProb: 0.34 | Hits: 10/15 [Robbery]
+  └─ Top-K Categories: Robbery:0.34, Shoplifting:0.13, Abuse:0.09, RoadAccidents:0.05, Stealing:0.05
+[Window 1111-1410 | 37.0s-47.0s] Normal: 0.161 | Abnormal: 0.839 | AvgProb: 0.34 | Hits: 11/15 [Robbery]
+  └─ Top-K Categories: Robbery:0.34, Shoplifting:0.14, Abuse:0.09, RoadAccidents:0.06, Stealing:0.05
+[Window 1141-1440 | 38.0s-48.0s] Normal: 0.130 | Abnormal: 0.870 | AvgProb: 0.37 | Hits: 12/15 [Robbery]
+  └─ Top-K Categories: Robbery:0.37, Shoplifting:0.13, Abuse:0.10, RoadAccidents:0.05, Fighting:0.05
+[Window 1171-1470 | 39.0s-49.0s] Normal: 0.141 | Abnormal: 0.859 | AvgProb: 0.35 | Hits: 13/15 [Robbery]
+  └─ Top-K Categories: Robbery:0.35, Shoplifting:0.13, Abuse:0.09, RoadAccidents:0.06, Fighting:0.05
+[Window 1201-1500 | 40.0s-50.0s] Normal: 0.153 | Abnormal: 0.847 | AvgProb: 0.32 | Hits: 14/15 [Robbery]
+  └─ Top-K Categories: Robbery:0.32, Shoplifting:0.13, Abuse:0.08, RoadAccidents:0.07, Fighting:0.06
+[Window 1231-1530 | 41.0s-51.0s] Normal: 0.156 | Abnormal: 0.844 | AvgProb: 0.32 | Hits: 15/15 [Robbery]
+  └─ Top-K Categories: Robbery:0.32, Shoplifting:0.13, Abuse:0.08, RoadAccidents:0.07, Fighting:0.07
+  └─ [事件开始] 连续命中 15 次，开始收集视频片段...
+[Window 1261-1560 | 42.0s-52.0s] Normal: 0.164 | Abnormal: 0.836 | AvgProb: 0.31 | Hits: 16/15 [Robbery]
+  └─ Top-K Categories: Robbery:0.31, Shoplifting:0.12, Abuse:0.08, RoadAccidents:0.07, Fighting:0.07
+[Window 1291-1590 | 43.0s-53.0s] Normal: 0.153 | Abnormal: 0.847 | AvgProb: 0.30 | Hits: 17/15 [Robbery]
+  └─ Top-K Categories: Robbery:0.30, Shoplifting:0.11, Fighting:0.09, Abuse:0.08, RoadAccidents:0.07
+[Window 1321-1620 | 44.0s-54.0s] Normal: 0.150 | Abnormal: 0.850 | AvgProb: 0.29 | Hits: 18/15 [Robbery]
+  └─ Top-K Categories: Robbery:0.29, Shoplifting:0.10, Fighting:0.09, Abuse:0.08, RoadAccidents:0.08
+[Window 1351-1650 | 45.0s-55.0s] Normal: 0.173 | Abnormal: 0.827 | AvgProb: 0.29 | Hits: 19/15 [Robbery]
+  └─ Top-K Categories: Robbery:0.29, Fighting:0.10, Shoplifting:0.09, Abuse:0.08, RoadAccidents:0.07
+[Window 1381-1680 | 46.0s-56.0s] Normal: 0.196 | Abnormal: 0.804 | AvgProb: 0.26 | Hits: 20/15 [Robbery]
+  └─ Top-K Categories: Robbery:0.26, Fighting:0.10, Shoplifting:0.08, RoadAccidents:0.08, Abuse:0.08
+[Window 1411-1710 | 47.0s-57.0s] Normal: 0.190 | Abnormal: 0.810 | AvgProb: 0.26 | Hits: 21/15 [Robbery]
+  └─ Top-K Categories: Robbery:0.26, Fighting:0.12, Abuse:0.08, Shoplifting:0.07, RoadAccidents:0.06
+[Window 1441-1740 | 48.0s-58.0s] Normal: 0.201 | Abnormal: 0.799 | AvgProb: 0.25 | Hits: 22/15 [Robbery]
+  └─ Top-K Categories: Robbery:0.25, Fighting:0.14, Abuse:0.08, RoadAccidents:0.06, Shoplifting:0.06
+[Window 1471-1770 | 49.0s-59.0s] Normal: 0.172 | Abnormal: 0.828 | AvgProb: 0.24 | Hits: 23/15 [Robbery]
+  └─ Top-K Categories: Robbery:0.24, Fighting:0.16, Abuse:0.09, RoadAccidents:0.07, Shoplifting:0.06
+[Window 1501-1800 | 50.0s-60.0s] Normal: 0.170 | Abnormal: 0.830 | AvgProb: 0.25 | Hits: 24/15 [Robbery]
+  └─ Top-K Categories: Robbery:0.25, Fighting:0.16, Abuse:0.10, RoadAccidents:0.06, Shooting:0.06
+[Window 1531-1830 | 51.0s-61.0s] Normal: 0.086 | Abnormal: 0.914 | AvgProb: 0.27 | Hits: 25/15 [Robbery]
+  └─ Top-K Categories: Robbery:0.27, Fighting:0.19, Abuse:0.12, Shooting:0.08, RoadAccidents:0.06
+[Window 1561-1860 | 52.0s-62.0s] Normal: 0.057 | Abnormal: 0.943 | AvgProb: 0.24 | Hits: 26/15 [Robbery]
+  └─ Top-K Categories: Robbery:0.24, Fighting:0.22, Abuse:0.12, Shooting:0.09, RoadAccidents:0.05
+[Window 1591-1890 | 53.0s-63.0s] Normal: 0.044 | Abnormal: 0.956 | AvgProb: 0.24 | Hits: 27/15 [Robbery]
+  └─ Top-K Categories: Robbery:0.24, Fighting:0.23, Abuse:0.12, Shooting:0.10, Assault:0.05
+[Window 1621-1920 | 54.0s-64.0s] Normal: 0.043 | Abnormal: 0.957 | AvgProb: 0.25 | Hits: 28/15 [Robbery]
+  └─ Top-K Categories: Robbery:0.25, Fighting:0.23, Abuse:0.13, Shooting:0.10, Assault:0.05
+[Window 1651-1950 | 55.0s-65.0s] Normal: 0.047 | Abnormal: 0.953 | AvgProb: 0.25 | Hits: 29/15 [Robbery]
+  └─ Top-K Categories: Robbery:0.25, Fighting:0.24, Abuse:0.12, Shooting:0.09, Assault:0.05
+[Window 1681-1980 | 56.0s-66.0s] Normal: 0.039 | Abnormal: 0.961 | AvgProb: 0.27 | Hits: 30/15 [Robbery]
+  └─ Top-K Categories: Robbery:0.27, Fighting:0.22, Abuse:0.13, Shooting:0.09, Assault:0.06
+[Window 1711-2010 | 57.0s-67.0s] Normal: 0.040 | Abnormal: 0.960 | AvgProb: 0.31 | Hits: 31/15 [Robbery]
+  └─ Top-K Categories: Robbery:0.31, Fighting:0.17, Abuse:0.12, Shooting:0.09, Assault:0.06
+[Window 1741-2040 | 58.0s-68.0s] Normal: 0.038 | Abnormal: 0.962 | AvgProb: 0.33 | Hits: 32/15 [Robbery]
+  └─ Top-K Categories: Robbery:0.33, Fighting:0.16, Abuse:0.13, Shooting:0.07, Assault:0.06
+[Window 1771-2070 | 59.0s-69.0s] Normal: 0.043 | Abnormal: 0.957 | AvgProb: 0.37 | Hits: 33/15 [Robbery]
+  └─ Top-K Categories: Robbery:0.37, Fighting:0.14, Abuse:0.13, Shooting:0.06, Assault:0.06
+[Window 1801-2100 | 60.0s-70.0s] Normal: 0.047 | Abnormal: 0.953 | AvgProb: 0.37 | Hits: 34/15 [Robbery]
+  └─ Top-K Categories: Robbery:0.37, Fighting:0.14, Abuse:0.13, Shoplifting:0.06, Shooting:0.06
+[Window 1831-2130 | 61.0s-71.0s] Normal: 0.061 | Abnormal: 0.939 | AvgProb: 0.35 | Hits: 35/15 [Robbery]
+  └─ Top-K Categories: Robbery:0.35, Fighting:0.16, Abuse:0.13, Shoplifting:0.07, Shooting:0.06
+[Window 1861-2160 | 62.0s-72.0s] Normal: 0.065 | Abnormal: 0.935 | AvgProb: 0.39 | Hits: 36/15 [Robbery]
+  └─ Top-K Categories: Robbery:0.39, Fighting:0.13, Abuse:0.13, Shoplifting:0.07, Shooting:0.05
+[Window 1891-2190 | 63.0s-73.0s] Normal: 0.097 | Abnormal: 0.903 | AvgProb: 0.40 | Hits: 37/15 [Robbery]
+  └─ Top-K Categories: Robbery:0.40, Abuse:0.12, Fighting:0.11, Shoplifting:0.08, RoadAccidents:0.04
+[Window 1921-2220 | 64.0s-74.0s] Normal: 0.129 | Abnormal: 0.871 | AvgProb: 0.39 | Hits: 38/15 [Robbery]
+  └─ Top-K Categories: Robbery:0.39, Abuse:0.11, Fighting:0.10, Shoplifting:0.09, RoadAccidents:0.04
+[Window 1951-2250 | 65.0s-75.0s] Normal: 0.163 | Abnormal: 0.837 | AvgProb: 0.36 | Hits: 39/15 [Robbery]
+  └─ Top-K Categories: Robbery:0.36, Abuse:0.11, Fighting:0.10, Shoplifting:0.10, RoadAccidents:0.05
+[Window 1981-2280 | 66.0s-76.0s] Normal: 0.133 | Abnormal: 0.867 | AvgProb: 0.37 | Hits: 40/15 [Robbery]
+  └─ Top-K Categories: Robbery:0.37, Abuse:0.11, Shoplifting:0.11, Fighting:0.10, RoadAccidents:0.05
+[Window 2011-2310 | 67.0s-77.0s] Normal: 0.097 | Abnormal: 0.903 | AvgProb: 0.39 | Hits: 41/15 [Robbery]
+  └─ Top-K Categories: Robbery:0.39, Abuse:0.12, Fighting:0.10, Shoplifting:0.10, RoadAccidents:0.05
+[Window 2041-2340 | 68.0s-78.0s] Normal: 0.107 | Abnormal: 0.893 | AvgProb: 0.39 | Hits: 42/15 [Robbery]
+  └─ Top-K Categories: Robbery:0.39, Abuse:0.11, Shoplifting:0.10, Fighting:0.09, RoadAccidents:0.05
+[Window 2071-2370 | 69.0s-79.0s] Normal: 0.084 | Abnormal: 0.916 | AvgProb: 0.39 | Hits: 43/15 [Robbery]
+  └─ Top-K Categories: Robbery:0.39, Abuse:0.13, Fighting:0.11, Shoplifting:0.09, RoadAccidents:0.05
+[Window 2101-2400 | 70.0s-80.0s] Normal: 0.096 | Abnormal: 0.904 | AvgProb: 0.38 | Hits: 44/15 [Robbery]
+  └─ Top-K Categories: Robbery:0.38, Fighting:0.12, Abuse:0.12, Shoplifting:0.09, RoadAccidents:0.05
+[Window 2131-2430 | 71.0s-81.0s] Normal: 0.057 | Abnormal: 0.943 | AvgProb: 0.40 | Hits: 45/15 [Robbery]
+  └─ Top-K Categories: Robbery:0.40, Abuse:0.13, Fighting:0.11, Shoplifting:0.09, RoadAccidents:0.04
+[Window 2161-2460 | 72.0s-82.0s] Normal: 0.049 | Abnormal: 0.951 | AvgProb: 0.40 | Hits: 46/15 [Robbery]
+  └─ Top-K Categories: Robbery:0.40, Abuse:0.14, Fighting:0.14, Shoplifting:0.07, Assault:0.04
+[Window 2191-2490 | 73.0s-83.0s] Normal: 0.054 | Abnormal: 0.946 | AvgProb: 0.37 | Hits: 47/15 [Robbery]
+  └─ Top-K Categories: Robbery:0.37, Fighting:0.16, Abuse:0.15, Shoplifting:0.07, Assault:0.04
+[Window 2221-2520 | 74.0s-84.0s] Normal: 0.064 | Abnormal: 0.936 | AvgProb: 0.34 | Hits: 48/15 [Robbery]
+  └─ Top-K Categories: Robbery:0.34, Fighting:0.17, Abuse:0.14, Shoplifting:0.07, RoadAccidents:0.05
+[Window 2251-2550 | 75.0s-85.0s] Normal: 0.040 | Abnormal: 0.960 | AvgProb: 0.38 | Hits: 49/15 [Robbery]
+  └─ Top-K Categories: Robbery:0.38, Abuse:0.14, Fighting:0.13, Shoplifting:0.07, Assault:0.05
+[Window 2281-2580 | 76.0s-86.0s] Normal: 0.037 | Abnormal: 0.963 | AvgProb: 0.38 | Hits: 50/15 [Robbery]
+  └─ Top-K Categories: Robbery:0.38, Fighting:0.14, Abuse:0.14, Shoplifting:0.07, Assault:0.05
+[Window 2311-2610 | 77.0s-87.0s] Normal: 0.043 | Abnormal: 0.957 | AvgProb: 0.38 | Hits: 51/15 [Robbery]
+  └─ Top-K Categories: Robbery:0.38, Fighting:0.15, Abuse:0.14, Shoplifting:0.07, Assault:0.04
+[Window 2341-2640 | 78.0s-88.0s] Normal: 0.042 | Abnormal: 0.958 | AvgProb: 0.38 | Hits: 52/15 [Robbery]
+  └─ Top-K Categories: Robbery:0.38, Fighting:0.15, Abuse:0.14, Shoplifting:0.07, Assault:0.04
+[Window 2371-2670 | 79.0s-89.0s] Normal: 0.041 | Abnormal: 0.959 | AvgProb: 0.39 | Hits: 53/15 [Robbery]
+  └─ Top-K Categories: Robbery:0.39, Fighting:0.14, Abuse:0.14, Shoplifting:0.08, Assault:0.04
+[Window 2401-2700 | 80.0s-90.0s] Normal: 0.043 | Abnormal: 0.957 | AvgProb: 0.39 | Hits: 54/15 [Robbery]
+  └─ Top-K Categories: Robbery:0.39, Fighting:0.15, Abuse:0.13, Shoplifting:0.08, Burglary:0.04
+[Window 2431-2730 | 81.0s-91.0s] Normal: 0.056 | Abnormal: 0.944 | AvgProb: 0.42 | Hits: 55/15 [Robbery]
+  └─ Top-K Categories: Robbery:0.42, Abuse:0.11, Fighting:0.11, Shoplifting:0.10, RoadAccidents:0.04
+[Window 2461-2760 | 82.0s-92.0s] Normal: 0.068 | Abnormal: 0.932 | AvgProb: 0.40 | Hits: 56/15 [Robbery]
+  └─ Top-K Categories: Robbery:0.40, Shoplifting:0.12, Abuse:0.10, Fighting:0.10, RoadAccidents:0.06
+[Window 2491-2790 | 83.0s-93.0s] Normal: 0.080 | Abnormal: 0.920 | AvgProb: 0.43 | Hits: 57/15 [Robbery]
+  └─ Top-K Categories: Robbery:0.43, Shoplifting:0.13, Abuse:0.08, Fighting:0.07, RoadAccidents:0.05
+[Window 2521-2820 | 84.0s-94.0s] Normal: 0.083 | Abnormal: 0.917 | AvgProb: 0.45 | Hits: 58/15 [Robbery]
+  └─ Top-K Categories: Robbery:0.45, Shoplifting:0.13, Abuse:0.09, Fighting:0.06, Burglary:0.05
+[Window 2551-2850 | 85.0s-95.0s] Normal: 0.107 | Abnormal: 0.893 | AvgProb: 0.45 | Hits: 59/15 [Robbery]
+  └─ Top-K Categories: Robbery:0.45, Shoplifting:0.13, Abuse:0.09, Fighting:0.05, Burglary:0.05
+[Window 2581-2880 | 86.0s-96.0s] Normal: 0.157 | Abnormal: 0.843 | AvgProb: 0.43 | Hits: 60/15 [Robbery]
+  └─ Top-K Categories: Robbery:0.43, Shoplifting:0.12, Abuse:0.09, Fighting:0.05, Burglary:0.05
+[Window 2611-2910 | 87.0s-97.0s] Normal: 0.195 | Abnormal: 0.805 | AvgProb: 0.42 | Hits: 61/15 [Robbery]
+  └─ Top-K Categories: Robbery:0.42, Shoplifting:0.11, Abuse:0.08, Burglary:0.04, Fighting:0.04
+[Window 2641-2940 | 88.0s-98.0s] Normal: 0.278 | Abnormal: 0.722 | AvgProb: 0.38 | Hits: 62/15 [Robbery]
+  └─ Top-K Categories: Robbery:0.38, Shoplifting:0.10, Abuse:0.08, Burglary:0.04, Fighting:0.04
+[Window 2671-2970 | 89.0s-99.0s] Normal: 0.389 | Abnormal: 0.611 | AvgProb: 0.31 | Hits: 63/15 [Robbery]
+  └─ Top-K Categories: Robbery:0.31, Shoplifting:0.09, Abuse:0.06, Fighting:0.03, Burglary:0.03
+[Window 2701-3000 | 90.0s-100.0s] Normal: 0.464 | Abnormal: 0.536 | AvgProb: 0.26 | Hits: 64/15 [Robbery]
+  └─ Top-K Categories: Robbery:0.26, Shoplifting:0.08, Abuse:0.06, Fighting:0.03, Burglary:0.03
+[Window 2731-3030 | 91.0s-101.0s] Normal: 0.479 | Abnormal: 0.521 | AvgProb: 0.26 | Hits: 65/15 [Robbery]
+  └─ Top-K Categories: Robbery:0.26, Shoplifting:0.08, Abuse:0.06, Fighting:0.03, Burglary:0.03
+[Window 2761-3060 | 92.0s-102.0s] Normal: 0.463 | Abnormal: 0.537 | AvgProb: 0.26 | Hits: 66/15 [Robbery]
+  └─ Top-K Categories: Robbery:0.26, Shoplifting:0.08, Abuse:0.06, Fighting:0.03, Burglary:0.03
+[Window 2791-3090 | 93.0s-103.0s] Normal: 0.540 | Abnormal: 0.460 | AvgProb: 0.22 | Hits: 67/15 [Robbery]
+  └─ Top-K Categories: Robbery:0.22, Shoplifting:0.07, Abuse:0.05, Fighting:0.03, RoadAccidents:0.02
+[Window 2821-3120 | 94.0s-104.0s] Normal: 0.583 | Abnormal: 0.417 | AvgProb: 0.19 | Hits: 68/15 [Robbery]
+  └─ Top-K Categories: Robbery:0.19, Shoplifting:0.07, Abuse:0.04, Fighting:0.03, RoadAccidents:0.02
+[Window 2851-3150 | 95.0s-105.0s] Normal: 0.567 | Abnormal: 0.433 | AvgProb: 0.20 | Hits: 69/15 [Robbery]
+  └─ Top-K Categories: Robbery:0.20, Shoplifting:0.07, Abuse:0.04, Fighting:0.03, RoadAccidents:0.02
+[Window 2881-3180 | 96.0s-106.0s] Normal: 0.586 | Abnormal: 0.414 | AvgProb: 0.19 | Hits: 70/15 [Robbery]
+  └─ Top-K Categories: Robbery:0.19, Shoplifting:0.07, Abuse:0.04, Fighting:0.03, RoadAccidents:0.02
+[Window 2911-3210 | 97.0s-107.0s] Normal: 0.544 | Abnormal: 0.456 | AvgProb: 0.21 | Hits: 71/15 [Robbery]
+  └─ Top-K Categories: Robbery:0.21, Shoplifting:0.07, Abuse:0.04, Fighting:0.04, RoadAccidents:0.02
+[Window 2941-3240 | 98.0s-108.0s] Normal: 0.488 | Abnormal: 0.512 | AvgProb: 0.23 | Hits: 72/15 [Robbery]
+  └─ Top-K Categories: Robbery:0.23, Shoplifting:0.08, Fighting:0.05, Abuse:0.05, RoadAccidents:0.03
+[Window 2971-3270 | 99.0s-109.0s] Normal: 0.490 | Abnormal: 0.510 | AvgProb: 0.23 | Hits: 73/15 [Robbery]
+  └─ Top-K Categories: Robbery:0.23, Shoplifting:0.08, Abuse:0.05, Fighting:0.05, RoadAccidents:0.03
+[Window 3001-3300 | 100.0s-110.0s] Normal: 0.526 | Abnormal: 0.474 | AvgProb: 0.21 | Hits: 74/15 [Robbery]
+  └─ Top-K Categories: Robbery:0.21, Shoplifting:0.07, Abuse:0.05, Fighting:0.05, RoadAccidents:0.03
+[Window 3031-3330 | 101.0s-111.0s] Normal: 0.513 | Abnormal: 0.487 | AvgProb: 0.22 | Hits: 75/15 [Robbery]
+  └─ Top-K Categories: Robbery:0.22, Shoplifting:0.08, Abuse:0.05, Fighting:0.04, RoadAccidents:0.03
+[Window 3061-3360 | 102.0s-112.0s] Normal: 0.550 | Abnormal: 0.450 | AvgProb: 0.20 | Hits: 76/15 [Robbery]
+  └─ Top-K Categories: Robbery:0.20, Shoplifting:0.07, Abuse:0.05, Fighting:0.04, RoadAccidents:0.02
+[Window 3091-3390 | 103.0s-113.0s] Normal: 0.509 | Abnormal: 0.491 | AvgProb: 0.22 | Hits: 77/15 [Robbery]
+  └─ Top-K Categories: Robbery:0.22, Shoplifting:0.08, Abuse:0.05, Fighting:0.04, RoadAccidents:0.03
+[Window 3121-3420 | 104.0s-114.0s] Normal: 0.459 | Abnormal: 0.541 | AvgProb: 0.25 | Hits: 78/15 [Robbery]
+  └─ Top-K Categories: Robbery:0.25, Shoplifting:0.08, Abuse:0.06, Fighting:0.05, RoadAccidents:0.03
+[Window 3151-3450 | 105.0s-115.0s] Normal: 0.431 | Abnormal: 0.569 | AvgProb: 0.26 | Hits: 79/15 [Robbery]
+  └─ Top-K Categories: Robbery:0.26, Shoplifting:0.09, Abuse:0.06, Fighting:0.05, RoadAccidents:0.03
+[Window 3181-3480 | 106.0s-116.0s] Normal: 0.449 | Abnormal: 0.551 | AvgProb: 0.25 | Hits: 80/15 [Robbery]
+  └─ Top-K Categories: Robbery:0.25, Shoplifting:0.08, Abuse:0.07, Fighting:0.05, RoadAccidents:0.03
+[Window 3211-3510 | 107.0s-117.0s] Normal: 0.402 | Abnormal: 0.598 | AvgProb: 0.27 | Hits: 81/15 [Robbery]
+  └─ Top-K Categories: Robbery:0.27, Shoplifting:0.09, Abuse:0.07, Fighting:0.05, RoadAccidents:0.03
+[Window 3241-3540 | 108.0s-118.0s] Normal: 0.339 | Abnormal: 0.661 | AvgProb: 0.30 | Hits: 82/15 [Robbery]
+  └─ Top-K Categories: Robbery:0.30, Shoplifting:0.09, Abuse:0.08, Fighting:0.06, RoadAccidents:0.03
+[Window 3271-3570 | 109.0s-119.0s] Normal: 0.297 | Abnormal: 0.703 | AvgProb: 0.32 | Hits: 83/15 [Robbery]
+  └─ Top-K Categories: Robbery:0.32, Shoplifting:0.10, Abuse:0.08, Fighting:0.07, RoadAccidents:0.04
+[Window 3301-3600 | 110.0s-120.0s] Normal: 0.252 | Abnormal: 0.748 | AvgProb: 0.33 | Hits: 84/15 [Robbery]
+  └─ Top-K Categories: Robbery:0.33, Shoplifting:0.11, Abuse:0.09, Fighting:0.07, RoadAccidents:0.04
+[Window 3331-3630 | 111.0s-121.0s] Normal: 0.181 | Abnormal: 0.819 | AvgProb: 0.37 | Hits: 85/15 [Robbery]
+  └─ Top-K Categories: Robbery:0.37, Abuse:0.11, Shoplifting:0.11, Fighting:0.08, RoadAccidents:0.04
+[Window 3361-3660 | 112.0s-122.0s] Normal: 0.118 | Abnormal: 0.882 | AvgProb: 0.39 | Hits: 86/15 [Robbery]
+  └─ Top-K Categories: Robbery:0.39, Abuse:0.11, Shoplifting:0.11, Fighting:0.10, RoadAccidents:0.04
+[Window 3391-3690 | 113.0s-123.0s] Normal: 0.097 | Abnormal: 0.903 | AvgProb: 0.40 | Hits: 87/15 [Robbery]
+  └─ Top-K Categories: Robbery:0.40, Abuse:0.12, Fighting:0.11, Shoplifting:0.10, RoadAccidents:0.04
+[Window 3421-3720 | 114.0s-124.0s] Normal: 0.094 | Abnormal: 0.906 | AvgProb: 0.40 | Hits: 88/15 [Robbery]
+  └─ Top-K Categories: Robbery:0.40, Abuse:0.12, Fighting:0.11, Shoplifting:0.09, Burglary:0.04
+[Window 3451-3750 | 115.0s-125.0s] Normal: 0.074 | Abnormal: 0.926 | AvgProb: 0.40 | Hits: 89/15 [Robbery]
+  └─ Top-K Categories: Robbery:0.40, Abuse:0.13, Fighting:0.12, Shoplifting:0.09, Assault:0.04
+[Window 3481-3780 | 116.0s-126.0s] Normal: 0.061 | Abnormal: 0.939 | AvgProb: 0.41 | Hits: 90/15 [Robbery]
+  └─ Top-K Categories: Robbery:0.41, Abuse:0.15, Fighting:0.11, Shoplifting:0.08, Assault:0.04
+[Window 3511-3810 | 117.0s-127.0s] Normal: 0.045 | Abnormal: 0.955 | AvgProb: 0.39 | Hits: 91/15 [Robbery]
+  └─ Top-K Categories: Robbery:0.39, Abuse:0.16, Fighting:0.14, Shoplifting:0.07, Assault:0.05
+[Window 3541-3840 | 118.0s-128.0s] Normal: 0.040 | Abnormal: 0.960 | AvgProb: 0.40 | Hits: 92/15 [Robbery]
+  └─ Top-K Categories: Robbery:0.40, Abuse:0.16, Fighting:0.13, Shoplifting:0.07, Assault:0.05
+[Window 3571-3870 | 119.0s-129.0s] Normal: 0.046 | Abnormal: 0.954 | AvgProb: 0.41 | Hits: 93/15 [Robbery]
+  └─ Top-K Categories: Robbery:0.41, Abuse:0.17, Fighting:0.12, Shoplifting:0.07, Assault:0.05
+[Window 3601-3900 | 120.0s-130.0s] Normal: 0.049 | Abnormal: 0.951 | AvgProb: 0.41 | Hits: 94/15 [Robbery]
+  └─ Top-K Categories: Robbery:0.41, Abuse:0.16, Fighting:0.11, Shoplifting:0.08, Assault:0.05
+[Window 3631-3930 | 121.0s-131.0s] Normal: 0.059 | Abnormal: 0.941 | AvgProb: 0.42 | Hits: 95/15 [Robbery]
+  └─ Top-K Categories: Robbery:0.42, Abuse:0.16, Fighting:0.09, Shoplifting:0.08, Assault:0.05
+[Window 3661-3960 | 122.0s-132.0s] Normal: 0.081 | Abnormal: 0.919 | AvgProb: 0.44 | Hits: 96/15 [Robbery]
+  └─ Top-K Categories: Robbery:0.44, Abuse:0.15, Shoplifting:0.08, Fighting:0.07, Assault:0.04
+[Window 3691-3990 | 123.0s-133.0s] Normal: 0.117 | Abnormal: 0.883 | AvgProb: 0.45 | Hits: 97/15 [Robbery]
+  └─ Top-K Categories: Robbery:0.45, Abuse:0.14, Shoplifting:0.09, Fighting:0.05, Burglary:0.04
+[Window 3721-4020 | 124.0s-134.0s] Normal: 0.121 | Abnormal: 0.879 | AvgProb: 0.43 | Hits: 98/15 [Robbery]
+  └─ Top-K Categories: Robbery:0.43, Abuse:0.14, Shoplifting:0.09, Fighting:0.06, Assault:0.03
+[Window 3751-4050 | 125.0s-135.0s] Normal: 0.112 | Abnormal: 0.888 | AvgProb: 0.44 | Hits: 99/15 [Robbery]
+  └─ Top-K Categories: Robbery:0.44, Abuse:0.13, Shoplifting:0.09, Fighting:0.06, Assault:0.04
+[Window 3781-4080 | 126.0s-136.0s] Normal: 0.127 | Abnormal: 0.873 | AvgProb: 0.43 | Hits: 100/15 [Robbery]
+  └─ Top-K Categories: Robbery:0.43, Abuse:0.13, Shoplifting:0.09, Fighting:0.06, Burglary:0.03
+[Window 3811-4110 | 127.0s-137.0s] Normal: 0.164 | Abnormal: 0.836 | AvgProb: 0.43 | Hits: 101/15 [Robbery]
+  └─ Top-K Categories: Robbery:0.43, Abuse:0.13, Shoplifting:0.09, Fighting:0.04, Burglary:0.03
+[Window 3841-4140 | 128.0s-138.0s] Normal: 0.217 | Abnormal: 0.783 | AvgProb: 0.41 | Hits: 102/15 [Robbery]
+  └─ Top-K Categories: Robbery:0.41, Abuse:0.12, Shoplifting:0.09, Burglary:0.04, Fighting:0.03
+[Window 3871-4170 | 129.0s-139.0s] Normal: 0.201 | Abnormal: 0.799 | AvgProb: 0.42 | Hits: 103/15 [Robbery]
+  └─ Top-K Categories: Robbery:0.42, Abuse:0.12, Shoplifting:0.10, Burglary:0.04, Fighting:0.03
+[Window 3901-4200 | 130.0s-140.0s] Normal: 0.182 | Abnormal: 0.818 | AvgProb: 0.42 | Hits: 104/15 [Robbery]
+  └─ Top-K Categories: Robbery:0.42, Abuse:0.12, Shoplifting:0.10, Fighting:0.04, Burglary:0.03
+[Window 3931-4230 | 131.0s-141.0s] Normal: 0.206 | Abnormal: 0.794 | AvgProb: 0.40 | Hits: 105/15 [Robbery]
+  └─ Top-K Categories: Robbery:0.40, Abuse:0.11, Shoplifting:0.10, Fighting:0.03, Burglary:0.03
+[Window 3961-4260 | 132.0s-142.0s] Normal: 0.181 | Abnormal: 0.819 | AvgProb: 0.40 | Hits: 106/15 [Robbery]
+  └─ Top-K Categories: Robbery:0.40, Abuse:0.11, Shoplifting:0.11, Fighting:0.05, Burglary:0.03
+[Window 3991-4290 | 133.0s-143.0s] Normal: 0.148 | Abnormal: 0.852 | AvgProb: 0.43 | Hits: 107/15 [Robbery]
+  └─ Top-K Categories: Robbery:0.43, Abuse:0.12, Shoplifting:0.10, Fighting:0.04, Burglary:0.04
+[Window 4021-4320 | 134.0s-144.0s] Normal: 0.139 | Abnormal: 0.861 | AvgProb: 0.43 | Hits: 108/15 [Robbery]
+  └─ Top-K Categories: Robbery:0.43, Abuse:0.12, Shoplifting:0.10, Fighting:0.04, Burglary:0.04
+[Window 4051-4350 | 135.0s-145.0s] Normal: 0.185 | Abnormal: 0.815 | AvgProb: 0.41 | Hits: 109/15 [Robbery]
+  └─ Top-K Categories: Robbery:0.41, Abuse:0.11, Shoplifting:0.10, Burglary:0.04, RoadAccidents:0.03
+[Window 4081-4380 | 136.0s-146.0s] Normal: 0.212 | Abnormal: 0.788 | AvgProb: 0.39 | Hits: 110/15 [Robbery]
+  └─ Top-K Categories: Robbery:0.39, Shoplifting:0.11, Abuse:0.10, RoadAccidents:0.04, Burglary:0.04
+  └─ [视频结束] 提交最后的事件片段...
+
+[VLM] 触发验证任务 | ID: 1 | 类型: Robbery | 范围: 1231-4403 (41.0s-146.8s)
+[VLM] 正在调用 Qwen-VL (ID: 1, 片段: 1231-4403, 共 22 帧)...
+
+==================================================
+ VLM 分析报告 (1231-4403 | 41.0s-146.8s)
+--------------------------------------------------
+{
+    "status": "abnormal",
+    "alarm_confidence": 0.92,
+    "description": "视频显示一个狭小室内空间（疑似电梯或储物间），一名穿黄色T恤的男子与两名穿浅色制服的男子发生激烈肢体冲突。初期三人有推搡、拉扯；随后一名制服男子被推倒在地，黄衣男子弯腰从其身上或附近拾取物品（疑似钱包/手机），并迅速离开现场。地面散落纸片、卡片等杂物，黄衣男子手持一深色包状物离开。整个过程具有突发性、对抗性与财物转移特征。",
+    "inferred_behavior": "黄衣男子对制服人员实施暴力压制后强行夺取随身财物，疑似抢劫；同时构成人身攻击与打架冲突；行为具有明确强制性与掠夺目的，非误操作或嬉戏。",
+    "dl_validation": "确认。视频中存在符合抢劫定义的全部核心要素：(1) 暴力行为：推倒、压制受害者；(2) 财物直接转移：黄衣男子在受害者倒地后立即俯身取物，并携带离开；(3) 受害者明显被迫/无法反抗（被按倒、失去平衡）；(4) 行为公开且对抗性强；(5) 场景为封闭空间，符合抢劫常见环境。无任何虚假迹象（如玩具道具、夸张表演、笑声等），动作真实、急促、目的明确。",
+    "other_crimes_detected": "1. 人身攻击 (assault)：黄衣男子主动推搡、击打并致制服男子倒地；2. 打架冲突 (fighting)：三方存在明显肢体对抗，包括抓拽、推搡、压制；3. 盗窃 (stealing)：若财物转移发生在受害者无意识/未抵抗状态下（如趁其倒地时拿走物品），可能构成盗窃；但结合暴力前置行为，更倾向定性为抢劫；4. 家庭暴力/虐待 (abuse)：不适用，因无证据表明施暴者与受害者存在家庭关系，且场景非典型家庭环境（更似公共/工作场所）。未发现枪支伤害、纵火、爆炸、入室盗窃、财产破坏等行为。",
+    "reason": "判断依据严格遵循定义标准：抢劫需‘暴力+财物强夺+面对面’，本视频中黄衣男子先用暴力使对方失能（推倒），随即取走物品并逃离，完全符合；人身攻击与打架冲突亦有清晰动作证据（推、拉、倒地）；无证据支持为恶作剧（无笑场、重复动作、道具破绽）；监控画质虽低但关键行为可辨识；地面散落物可能为被抢物品掉落（如证件、卡片），增强掠夺意图可信度。因此判定为真实抢劫事件，报警置信度高（0.92），仅留0.08余量因无法100%确认所取物品具体性质（但高度可能为贵重物品）。"
+}
+==================================================
+
+[警报生效] 检测到真实威胁：ROBBERY 
+警报级别: 0.92 | 理由: 判断依据严格遵循定义标准：抢劫需‘暴力+财物强夺+面对面’，本视频中黄衣男子先用暴力使对方失能（推倒），随即取走物品并逃离，完全符合；人身攻击与打架冲突亦有清晰动作证据（推、拉、倒地）；无证据支持为恶作剧（无笑场、重复动作、道具破绽）；监控画质虽低但关键行为可辨识；地面散落物可能为被抢物品掉落（如证件、卡片），增强掠夺意图可信度。因此判定为真实抢劫事件，报警置信度高（0.92），仅留0.08余量因无法100%确认所取物品具体性质（但高度可能为贵重物品）。

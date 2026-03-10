@@ -1,0 +1,27 @@
+正在初始化深度检测模型 (VadCLIP)...
+/home/chenpengxu/VadCLIP/pipeline.py:86: FutureWarning: You are using `torch.load` with `weights_only=False` (the current default value), which uses the default pickle module implicitly. It is possible to construct malicious pickle data which will execute arbitrary code during unpickling (See https://github.com/pytorch/pytorch/blob/main/SECURITY.md#untrusted-models for more details). In a future release, the default value for `weights_only` will be flipped to `True`. This limits the functions that could be executed during unpickling. Arbitrary objects will no longer be allowed to be loaded via this mode unless they are explicitly allowlisted by the user via `torch.serialization.add_safe_globals`. We recommend you start setting `weights_only=True` for any use case where you don't have full control of the loaded file. Please open an issue on GitHub for any issues related to this experimental feature.
+  model_param = torch.load(VIOLENCE_MODEL_PATH, map_location=DEVICE)
+==================================================
+ 视频异常检测系统已启动 (搜索目录: /home/chenpengxu/VadCLIP/test_video)
+==================================================
+
+当前可用视频：
+ 1. test_video_stealing.mp4
+ 2. test_video_long.mp4
+ 3. Abuse044_x264.mp4
+ 4. test_video_fake_arson.mp4
+ 5. test_video_shooting.mp4
+ 6. test_video_assault.mp4
+ 7. test_video_arson.mp4
+ 8. test_video_fake_burglary.mp4
+ 9. test_video_normal.mp4
+ 10. test_video_robbery.mp4
+ 11. Stealing017_x264.mp4
+ 12. test_video_burglary.mp4
+ 13. test_video_fighting.mp4
+ 14. test_video_robbery2.mp4
+ 15. test_video_fake_shooting.mp4
+ 16. Normal_Videos396_x264.mp4
+ 17. test_video_long2.mp4
+
+请输入视频编号或文件名 (输入 'q' 退出): 

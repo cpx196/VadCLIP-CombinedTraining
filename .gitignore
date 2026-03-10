@@ -1,0 +1,31 @@
+# Large videos / raw media
+/test_video/
+/TestData/video/
+*.mp4
+*.avi
+*.mkv
+*.mov
+*.webm
+*.m4v
+*.flv
+*.wmv
+
+# Large model weights / checkpoints
+*.pth
+*.pt
+*.ckpt
+*.bin
+*.safetensors
+*.onnx
+*.aspx
+/CLIP/0_CLIPModel/
+
+# Python cache
+__pycache__/
+*.py[cod]
+*.pyo
+
+# IDE / OS
+.vscode/
+.idea/
+.DS_Store

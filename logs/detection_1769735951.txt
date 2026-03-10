@@ -1,0 +1,103 @@
+正在初始化深度检测模型 (VadCLIP)...
+/home/chenpengxu/VadCLIP/pipeline.py:86: FutureWarning: You are using `torch.load` with `weights_only=False` (the current default value), which uses the default pickle module implicitly. It is possible to construct malicious pickle data which will execute arbitrary code during unpickling (See https://github.com/pytorch/pytorch/blob/main/SECURITY.md#untrusted-models for more details). In a future release, the default value for `weights_only` will be flipped to `True`. This limits the functions that could be executed during unpickling. Arbitrary objects will no longer be allowed to be loaded via this mode unless they are explicitly allowlisted by the user via `torch.serialization.add_safe_globals`. We recommend you start setting `weights_only=True` for any use case where you don't have full control of the loaded file. Please open an issue on GitHub for any issues related to this experimental feature.
+  model_param = torch.load(VIOLENCE_MODEL_PATH, map_location=DEVICE)
+==================================================
+ 视频异常检测系统已启动 (搜索目录: /home/chenpengxu/VadCLIP/test_video)
+==================================================
+
+当前可用视频：
+ 1. test_video_stealing.mp4
+ 2. test_video_long.mp4
+ 3. test_video_fake_arson.mp4
+ 4. test_video_shooting.mp4
+ 5. test_video_assault.mp4
+ 6. test_video_arson.mp4
+ 7. test_video_fake_burglary.mp4
+ 8. test_video_normal.mp4
+ 9. test_video_robbery.mp4
+ 10. Stealing017_x264.mp4
+ 11. test_video_burglary.mp4
+ 12. test_video_fighting.mp4
+ 13. test_video_robbery2.mp4
+ 14. test_video_fake_shooting.mp4
+ 15. Normal_Videos396_x264.mp4
+ 16. test_video_long2.mp4
+
+请输入视频编号或文件名 (输入 'q' 退出): 
+开始播放与检测流... (视频 FPS: 30.0, 窗口: 10s, 步长: 1s, 按 'q' 键退出)
+[Window 0001-0300 | 0.0s-10.0s] Normal: 0.961 | Abnormal: 0.039 | AvgProb: 0.01 | Hits: 0/4 ---
+  └─ Top-K Categories: Abuse:0.01, Robbery:0.01, Fighting:0.00, Burglary:0.00, Shoplifting:0.00
+[Window 0031-0330 | 1.0s-11.0s] Normal: 0.938 | Abnormal: 0.062 | AvgProb: 0.01 | Hits: 0/4 ---
+  └─ Top-K Categories: Abuse:0.01, Robbery:0.01, Fighting:0.01, Burglary:0.01, Shoplifting:0.01
+[Window 0061-0360 | 2.0s-12.0s] Normal: 0.866 | Abnormal: 0.134 | AvgProb: 0.03 | Hits: 0/4 ---
+  └─ Top-K Categories: Robbery:0.03, Abuse:0.03, Fighting:0.02, Burglary:0.01, Shoplifting:0.01
+[Window 0091-0390 | 3.0s-13.0s] Normal: 0.759 | Abnormal: 0.241 | AvgProb: 0.06 | Hits: 0/4 ---
+  └─ Top-K Categories: Robbery:0.06, Abuse:0.05, Fighting:0.03, Burglary:0.02, Assault:0.01
+[Window 0121-0420 | 4.0s-14.0s] Normal: 0.628 | Abnormal: 0.372 | AvgProb: 0.09 | Hits: 0/4 ---
+  └─ Top-K Categories: Robbery:0.09, Abuse:0.08, Fighting:0.05, Burglary:0.03, Assault:0.02
+[Window 0151-0450 | 5.0s-15.0s] Normal: 0.492 | Abnormal: 0.508 | AvgProb: 0.11 | Hits: 0/4 ---
+  └─ Top-K Categories: Robbery:0.11, Abuse:0.10, Fighting:0.09, Burglary:0.04, Assault:0.03
+[Window 0181-0480 | 6.0s-16.0s] Normal: 0.343 | Abnormal: 0.657 | AvgProb: 0.14 | Hits: 0/4 ---
+  └─ Top-K Categories: Robbery:0.14, Abuse:0.13, Fighting:0.12, Burglary:0.05, Assault:0.04
+[Window 0211-0510 | 7.0s-17.0s] Normal: 0.334 | Abnormal: 0.666 | AvgProb: 0.14 | Hits: 0/4 ---
+  └─ Top-K Categories: Robbery:0.14, Abuse:0.13, Fighting:0.13, Burglary:0.05, Assault:0.04
+[Window 0241-0540 | 8.0s-18.0s] Normal: 0.307 | Abnormal: 0.693 | AvgProb: 0.14 | Hits: 0/4 ---
+  └─ Top-K Categories: Fighting:0.14, Robbery:0.14, Abuse:0.14, Burglary:0.06, Assault:0.04
+[Window 0271-0570 | 9.0s-19.0s] Normal: 0.265 | Abnormal: 0.735 | AvgProb: 0.16 | Hits: 1/4 [Fighting]
+  └─ Top-K Categories: Fighting:0.16, Robbery:0.14, Abuse:0.14, Burglary:0.05, Assault:0.05
+[Window 0301-0600 | 10.0s-20.0s] Normal: 0.246 | Abnormal: 0.754 | AvgProb: 0.17 | Hits: 2/4 [Fighting]
+  └─ Top-K Categories: Fighting:0.17, Robbery:0.15, Abuse:0.15, Burglary:0.06, Assault:0.05
+[Window 0331-0630 | 11.0s-21.0s] Normal: 0.189 | Abnormal: 0.811 | AvgProb: 0.17 | Hits: 1/4 [Robbery]
+  └─ Top-K Categories: Robbery:0.17, Abuse:0.16, Fighting:0.16, Burglary:0.06, Assault:0.06
+[Window 0361-0660 | 12.0s-22.0s] Normal: 0.072 | Abnormal: 0.928 | AvgProb: 0.19 | Hits: 2/4 [Robbery]
+  └─ Top-K Categories: Robbery:0.19, Abuse:0.19, Fighting:0.15, Assault:0.09, Riot:0.06
+[Window 0391-0690 | 13.0s-23.0s] Normal: 0.041 | Abnormal: 0.959 | AvgProb: 0.19 | Hits: 1/4 [Abuse]
+  └─ Top-K Categories: Abuse:0.19, Robbery:0.18, Fighting:0.16, Assault:0.11, Riot:0.09
+[Window 0421-0720 | 14.0s-24.0s] Normal: 0.033 | Abnormal: 0.967 | AvgProb: 0.19 | Hits: 1/4 [Robbery]
+  └─ Top-K Categories: Robbery:0.19, Abuse:0.19, Assault:0.13, Fighting:0.13, Riot:0.08
+[Window 0451-0750 | 15.0s-25.0s] Normal: 0.023 | Abnormal: 0.977 | AvgProb: 0.19 | Hits: 1/4 [Abuse]
+  └─ Top-K Categories: Abuse:0.19, Robbery:0.18, Assault:0.15, Fighting:0.11, Riot:0.09
+[Window 0481-0780 | 16.0s-26.0s] Normal: 0.026 | Abnormal: 0.974 | AvgProb: 0.19 | Hits: 2/4 [Abuse]
+  └─ Top-K Categories: Abuse:0.19, Robbery:0.18, Assault:0.15, Fighting:0.10, Riot:0.10
+[Window 0511-0810 | 17.0s-27.0s] Normal: 0.021 | Abnormal: 0.979 | AvgProb: 0.19 | Hits: 3/4 [Abuse]
+  └─ Top-K Categories: Abuse:0.19, Robbery:0.17, Assault:0.16, Riot:0.10, Fighting:0.08
+[Window 0541-0840 | 18.0s-28.0s] Normal: 0.018 | Abnormal: 0.982 | AvgProb: 0.18 | Hits: 4/4 [Abuse]
+  └─ Top-K Categories: Abuse:0.18, Robbery:0.16, Assault:0.16, Riot:0.11, Fighting:0.08
+  └─ [事件开始] 连续命中 4 次，开始收集视频片段...
+[Window 0571-0870 | 19.0s-29.0s] Normal: 0.013 | Abnormal: 0.987 | AvgProb: 0.17 | Hits: 5/4 [Abuse]
+  └─ Top-K Categories: Abuse:0.17, Assault:0.17, Robbery:0.13, Riot:0.13, Explosion:0.10
+  └─ [事件结束] 类别变更: Abuse -> Assault. 发送 VLM 申请...
+
+[VLM] 触发验证任务 | ID: 1 | 类型: Abuse | 范围: 541-900 (18.0s-30.0s)
+[Window 0601-0900 | 20.0s-30.0s] Normal: 0.012 | Abnormal: 0.988 | AvgProb: 0.17 | Hits: 1/4 [Assault]
+  └─ Top-K Categories: Assault:0.17, Abuse:0.16, Explosion:0.13, Robbery:0.12, Riot:0.12
+[VLM] 正在调用 Qwen-VL (ID: 1, 片段: 541-900, 共 22 帧)...
+[Window 0631-0930 | 21.0s-31.0s] Normal: 0.011 | Abnormal: 0.989 | AvgProb: 0.16 | Hits: 2/4 [Assault]
+  └─ Top-K Categories: Assault:0.16, Abuse:0.15, Explosion:0.13, Robbery:0.12, Riot:0.12
+[Window 0661-0960 | 22.0s-32.0s] Normal: 0.010 | Abnormal: 0.990 | AvgProb: 0.15 | Hits: 3/4 [Assault]
+  └─ Top-K Categories: Assault:0.15, Explosion:0.15, Abuse:0.14, Riot:0.13, Robbery:0.10
+[Window 0691-0990 | 23.0s-33.0s] Normal: 0.010 | Abnormal: 0.990 | AvgProb: 0.16 | Hits: 1/4 [Explosion]
+  └─ Top-K Categories: Explosion:0.16, Assault:0.15, Riot:0.14, Abuse:0.12, Shooting:0.10
+[Window 0721-1020 | 24.0s-34.0s] Normal: 0.008 | Abnormal: 0.992 | AvgProb: 0.17 | Hits: 2/4 [Explosion]
+  └─ Top-K Categories: Explosion:0.17, Riot:0.15, Assault:0.15, Abuse:0.11, Shooting:0.10
+[Window 0751-1050 | 25.0s-35.0s] Normal: 0.011 | Abnormal: 0.989 | AvgProb: 0.15 | Hits: 1/4 [Riot]
+  └─ Top-K Categories: Riot:0.15, Explosion:0.15, Assault:0.14, Fighting:0.13, Abuse:0.11
+[Window 0781-1080 | 26.0s-36.0s] Normal: 0.012 | Abnormal: 0.988 | AvgProb: 0.16 | Hits: 1/4 [Fighting]
+  └─ Top-K Categories: Fighting:0.16, Assault:0.14, Riot:0.14, Explosion:0.12, Abuse:0.12
+
+==================================================
+ VLM 分析报告 (541-900 | 18.0s-30.0s)
+--------------------------------------------------
+{
+    "status": "abnormal",
+    "alarm_confidence": 0.95,
+    "description": "视频显示一个地下通道场景（非家庭环境），四人中一人靠墙站立，其余三人向前行进；随后其中两人突然对靠墙者实施暴力攻击，将其推倒并拳打脚踢，另一人倒地后未起身；攻击者持续施暴约4秒，受害者呈现明显防御与痛苦姿态，最终仰卧地面不动，另一名同伴也倒地。整个过程具有突发性、强制性与伤害性，无任何游戏或表演迹象。",
+    "inferred_behavior": "多人协同暴力袭击：一名穿深色外套者主动发起攻击，另一名穿浅灰连帽衫者参与围殴，导致两名受害者倒地；其中一人被击倒后持续遭受踩踏/踢打，另一人倒地后未再移动，疑似失去意识或严重受伤。",
+    "dl_validation": "确认。视频中存在明确的暴力行为：强力推搡致人摔倒（0:03）、连续拳击/踢打（0:04–0:07）、受害者呈被动仰卧、双臂张开、面部朝上且无反抗能力，符合‘Abuse’定义中的‘有力殴打’‘强制性攻击’‘真实痛苦表现’三项核心标准；环境虽非家庭，但DL模型初筛为Abuse仍成立——本系统任务说明中明确‘监控场景：家庭环境’，但视频实际为公共通道，属场景误标；然而根据核心原则‘优先检测真实安全威胁’，即使场景不符，只要行为构成真实虐待/暴力即应判定为异常。因此DL检测结果在行为实质上是正确的，应确认。",
+    "other_crimes_detected": "人身攻击 (assault)、打架冲突 (fighting)",
+    "reason": "1）DL检测的Abuse确认：攻击动作迅猛有力（如0:03推倒、0:04-0:06连续击打），受害者倒地后无自主行动能力，肢体姿态（双臂外展、腿屈曲）符合受创后失能特征；无笑声、停顿、重复动作等表演迹象；2）人身攻击（assault）成立：根据刑法定义，故意以暴力侵害他人身体完整性即构成assault，视频中至少两人对一人实施非法暴力，满足‘有意图、有接触、造成伤害风险’三要素；3）打架冲突（fighting）成立：多人参与、动态对抗、持续数秒的肢体冲突，符合典型群殴特征；4）其他类型排除：无财物夺取（排除robbery/theft）、无入室行为（非住宅）、无枪支/火源/爆炸物/破坏公物迹象；5）尽管场景为地下通道（非家庭），但系统核心原则强调‘优先检测真实安全威胁’，且视频内容确属严重暴力事件，必须报警；置信度0.95因画面略模糊但关键动作清晰可辨，无合理怀疑为演习或戏仿。"
+}
+==================================================
+
+[警报生效] 检测到真实威胁：ABUSE 
+警报级别: 0.95 | 理由: 1）DL检测的Abuse确认：攻击动作迅猛有力（如0:03推倒、0:04-0:06连续击打），受害者倒地后无自主行动能力，肢体姿态（双臂外展、腿屈曲）符合受创后失能特征；无笑声、停顿、重复动作等表演迹象；2）人身攻击（assault）成立：根据刑法定义，故意以暴力侵害他人身体完整性即构成assault，视频中至少两人对一人实施非法暴力，满足‘有意图、有接触、造成伤害风险’三要素；3）打架冲突（fighting）成立：多人参与、动态对抗、持续数秒的肢体冲突，符合典型群殴特征；4）其他类型排除：无财物夺取（排除robbery/theft）、无入室行为（非住宅）、无枪支/火源/爆炸物/破坏公物迹象；5）尽管场景为地下通道（非家庭），但系统核心原则强调‘优先检测真实安全威胁’，且视频内容确属严重暴力事件，必须报警；置信度0.95因画面略模糊但关键动作清晰可辨，无合理怀疑为演习或戏仿。
