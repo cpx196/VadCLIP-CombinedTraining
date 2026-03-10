@@ -1,7 +1,5 @@
 # VadCLIP-CombinedTraining
 
-Cross-dataset joint training extension for :contentReference[oaicite:0]{index=0}.
-
 This project extends VadCLIP with the ability to **train on multiple datasets simultaneously** (e.g., UCF-Crime and XD-Violence).  
 The **core backbone architecture remains unchanged**; improvements focus on the **training pipeline and dataset handling**.
 
